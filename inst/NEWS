@@ -1,0 +1,15 @@
+Changes in version: randomNames_0.0-4
+
+  o Added NAMESPACE.
+
+Changes in version: randomNames_0.0-3
+
+  o Modified function to adapt to improvements in data.table.
+
+Changes in version: randomNames_0.0-2
+
+  o Refined function to recode supplied gender and ethnicity argument/variables if not in function appropriate form.
+
+Changes in version: randomNames_0.0-1
+
+  o Package Released.
