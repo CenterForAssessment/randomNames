@@ -7,7 +7,7 @@ function(
 	name.order="last.first", 
 	name.sep=", ") {
 
-	.N <- NULL ## To prevent R CMD check warnings
+	.N <- V1 <- NULL ## To prevent R CMD check warnings
                         
 	first_names <- function(tmp.gender, tmp.ethnicity, tmp.number) {
 		tmp.gender <- tmp.gender[1]; tmp.ethnicity <- tmp.ethnicity[1]
@@ -56,7 +56,7 @@ function(
 	ethnicity[is.na(ethnicity)] <- round(runif(length(ethnicity[is.na(ethnicity)]),min=1,max=5)) 
 
 	tmp.dt <- data.table(seq.int(tmp.length), gender, ethnicity)
-	key(tmp.dt) <- c("gender", "ethnicity") 
+	setkeyv(tmp.dt, c("gender", "ethnicity"))
 
 	if (which.names=="first" | which.names=="both") {
 		tmp.dt$tmp_first <- tmp.dt[,first_names(gender, ethnicity, .N), by=list(gender, ethnicity)]$V1
@@ -66,7 +66,7 @@ function(
 		tmp.dt$tmp_last <- tmp.dt[,last_names(ethnicity, .N), by=list(ethnicity)]$V1
 	}
 
-	key(tmp.dt) <- "V1"
+	setkey(tmp.dt, V1)
 	if (which.names=="first") return(tmp.dt$tmp_first)
 	if (which.names=="last") return(tmp.dt$tmp_last)
 	if (which.names=="both" & name.order=="last.first") return(paste(tmp.dt$tmp_last, tmp.dt$tmp_first, sep=name.sep))
