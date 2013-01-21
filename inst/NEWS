@@ -1,3 +1,7 @@
+Changes in version: randomNames_0.0-6
+
+  o Changed DESCRIPTION to Import data.table
+
 Changes in version: randomNames_0.0-5
 
   o Fixed key to accomodate changes in data.table 1.7.8.
