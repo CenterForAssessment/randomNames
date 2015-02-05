@@ -8,6 +8,7 @@ function(
 	name.sep=", ") {
 
 	.N <- V1 <- NULL ## To prevent R CMD check warnings
+	randomNamesData <- randomNamesData
                         
 	first_names <- function(tmp.gender, tmp.ethnicity, tmp.number) {
 		tmp.gender <- tmp.gender[1]; tmp.ethnicity <- tmp.ethnicity[1]
