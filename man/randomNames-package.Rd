@@ -12,8 +12,8 @@ randomNames contains one function, \code{randomNames} that quickly generates any
 \tabular{ll}{
 Package: \tab randomNames\cr
 Type: \tab Package\cr
-Version: \tab 0.0-7\cr
-Date: \tab 2013-2-5\cr
+Version: \tab 0.0-8\cr
+Date: \tab 2013-2-6\cr
 License: \tab GPL-3\cr
 LazyLoad: \tab yes\cr
 }

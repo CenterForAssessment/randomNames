@@ -8,17 +8,16 @@ function(
 	name.sep=", ") {
 
 	.N <- V1 <- NULL ## To prevent R CMD check warnings
-	randomNamesData <- randomNamesData
                         
 	first_names <- function(tmp.gender, tmp.ethnicity, tmp.number) {
 		tmp.gender <- tmp.gender[1]; tmp.ethnicity <- tmp.ethnicity[1]
-		tmp <- randomNamesData[[paste("first_names_e", tmp.ethnicity, "_g", tmp.gender, sep="")]]
+		tmp <- randomNames::randomNamesData[[paste("first_names_e", tmp.ethnicity, "_g", tmp.gender, sep="")]]
 		suppressWarnings(sample(rownames(tmp), tmp.number, replace=TRUE, prob=tmp))
 	} 
 
 	last_names <- function(tmp.ethnicity, tmp.number) {
 		tmp.ethnicity <- tmp.ethnicity[1]
-		tmp <- randomNamesData[[paste("last_names_e", tmp.ethnicity, sep="")]]
+		tmp <- randomNames::randomNamesData[[paste("last_names_e", tmp.ethnicity, sep="")]]
 		suppressWarnings(sample(rownames(tmp), tmp.number, replace=TRUE, prob=tmp))
 	}
 
