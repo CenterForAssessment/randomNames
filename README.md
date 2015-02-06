@@ -22,7 +22,7 @@ Install latest development release from [Github](https://github.com/CenterForAss
 ```R
 install.packages("devtools")
 require(devtools)
-install_github("centerforassessment/randomNames")
+install_github("CenterForAssessment/randomNames")
 require(randomNames)
 ```
 
