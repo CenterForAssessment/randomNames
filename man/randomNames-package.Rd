@@ -1,11 +1,11 @@
 \name{randomNames-package}
 \alias{randomNames-package}
 \docType{package}
-\title{Functions to generate random gender and ethnicity correct first and/or last names where names are proportionally sampled based upon their frequency in
-a large scale database.
+\title{Function for Generating Random Names and a Dataset
 }
 \description{
-randomNames contains one function, \code{randomNames} that quickly generates any number of gender and ethnic specific random first and/or last names.
+Functions for generating random gender and ethnicity correct first and/or last names where names are proportionally sampled based upon their frequency in
+a large scale database.
 }
 
 \details{
