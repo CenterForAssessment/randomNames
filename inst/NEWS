@@ -1,3 +1,7 @@
+Changes in version: randomNames_0.0-7
+
+  o Changed randomNamesData to environment
+
 Changes in version: randomNames_0.0-6
 
   o Changed DESCRIPTION to Import data.table

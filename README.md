@@ -10,7 +10,7 @@ frequency in a large scale database.
 To install the latest stable release from [CRAN](http://cran.r-project.org/package=randomNames)
 ---------------------------
 
-```coffee
+```R
 install.packages("randomNames")
 require(randomNames)
 ```
@@ -19,10 +19,10 @@ require(randomNames)
 Install latest development release from [Github](https://github.com/CenterForAssessment/randomNames/) :octocat:
 ----------------------------------------------
 
-```coffee
+```R
 install.packages("devtools")
 require(devtools)
-install_github("randomNames", "CenterForAssessment")
+install_github("CenterForAssessment/randomNames")
 require(randomNames)
 ```
 
