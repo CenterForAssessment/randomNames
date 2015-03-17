@@ -6,7 +6,7 @@ random first and/or last name generator
 ---------------------------------------
 
 The function **randomNames** is used to create random gender and ethnicity correct first and/or last names where names are proportionally sampled based upon their 
-frequency in a large scale database. [![Join the chat at https://gitter.im/CenterForAssessment/randomNames](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/CenterForAssessment/randomNames?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+frequency in a large scale database. [![Build Status](https://travis-ci.org/CenterForAssessment/randomNames.svg?branch=master)](https://travis-ci.org/CenterForAssessment/randomNames) [![Join the chat at https://gitter.im/CenterForAssessment/randomNames](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/CenterForAssessment/randomNames?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 To install the latest stable release from [CRAN](http://cran.r-project.org/package=randomNames)
 ---------------------------
