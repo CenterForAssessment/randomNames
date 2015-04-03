@@ -1,7 +1,7 @@
 language: r
 warnings_are_errors: true
 
-inotifications:
+notifications:
   webhooks:
     urls:
       - https://webhooks.gitter.im/e/4aa77870ca2e9e17d777
