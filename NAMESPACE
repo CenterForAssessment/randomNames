@@ -1,2 +1,4 @@
 import(data.table)
 export(randomNames)
+importFrom(stats,runif)
+importFrom(utils,packageVersion)
