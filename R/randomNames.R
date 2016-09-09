@@ -1,28 +1,33 @@
-`randomNames` <- 
+`randomNames` <-
 function(
-	n, 
-	gender, 
-	ethnicity, 
-	which.names="both", 
-	name.order="last.first", 
-	name.sep=", ") {
+	n,
+	gender,
+	ethnicity,
+	which.names="both",
+	name.order="last.first",
+	name.sep=", ",
+	sample.with.replacement=TRUE) {
 
 	.N <- V1 <- NULL ## To prevent R CMD check warnings
-                        
+
 	first_names <- function(tmp.gender, tmp.ethnicity, tmp.number) {
 		tmp.gender <- tmp.gender[1]; tmp.ethnicity <- tmp.ethnicity[1]
 		tmp <- randomNames::randomNamesData[[paste("first_names_e", tmp.ethnicity, "_g", tmp.gender, sep="")]]
-		suppressWarnings(sample(rownames(tmp), tmp.number, replace=TRUE, prob=tmp))
-	} 
+		suppressWarnings(sample(rownames(tmp), tmp.number, replace=sample.with.replacement, prob=tmp))
+	}
 
 	last_names <- function(tmp.ethnicity, tmp.number) {
 		tmp.ethnicity <- tmp.ethnicity[1]
 		tmp <- randomNames::randomNamesData[[paste("last_names_e", tmp.ethnicity, sep="")]]
-		suppressWarnings(sample(rownames(tmp), tmp.number, replace=TRUE, prob=tmp))
+		suppressWarnings(sample(rownames(tmp), tmp.number, replace=sample.with.replacement, prob=tmp))
 	}
 
 	if (missing(n) & missing(gender) & missing(ethnicity)) n <- 1
-	if (missing(n)) n <- NA
+	if (missing(n)) n <- 1
+	if (n < 1) {
+		message("\tNOTE: Please supply a positive integer for the argument n.")
+		return(NULL)
+	}
 	if (missing(gender)) gender <- NA
 	if (missing(ethnicity)) ethnicity <- NA
 
@@ -52,8 +57,8 @@ function(
 		ethnicity <- tmp
 	}
 
-	gender[is.na(gender)] <- round(runif(length(gender[is.na(gender)]))) 
-	ethnicity[is.na(ethnicity)] <- round(runif(length(ethnicity[is.na(ethnicity)]),min=1,max=5)) 
+	gender[is.na(gender)] <- round(runif(length(gender[is.na(gender)])))
+	ethnicity[is.na(ethnicity)] <- round(runif(length(ethnicity[is.na(ethnicity)]),min=1,max=5))
 
 	tmp.dt <- data.table(seq.int(tmp.length), gender, ethnicity)
 	setkeyv(tmp.dt, c("gender", "ethnicity"))
@@ -73,4 +78,3 @@ function(
 	if (which.names=="both" & name.order=="first.last") return(paste(tmp.dt$tmp_first, tmp.dt$tmp_last, sep=name.sep))
 
 } ## END randomNames Function
-

@@ -12,13 +12,13 @@ a large scale database.
 \tabular{ll}{
 Package: \tab randomNames\cr
 Type: \tab Package\cr
-Version: \tab 0.1-0\cr
-Date: \tab 2015-7-23\cr
+Version: \tab 0.2-0\cr
+Date: \tab 2016-9-9\cr
 License: \tab GPL-3\cr
 LazyLoad: \tab yes\cr
 }
 }
 
-\author{Damian W. Betebenner \email{DBetebenner@nciea.org}} 
+\author{Damian W. Betebenner \email{DBetebenner@nciea.org}}
 
 \keyword{package}
