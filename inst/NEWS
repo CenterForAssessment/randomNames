@@ -1,3 +1,8 @@
+Changes in version: randomNames_0.2-0
+
+  o Cleaned up documentation
+  o Fixed GitHub pull requests
+
 Changes in version: randomNames_0.0-7
 
   o Changed randomNamesData to environment

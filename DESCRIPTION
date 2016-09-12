@@ -1,15 +1,15 @@
 Package: randomNames
-Version: 0.1-0
-Date: 2015-7-23
+Version: 0.2-0
+Date: 2016-9-9
 Title: Function for Generating Random Names and a Dataset
-Depends: R (>= 2.10.0) 
-Imports: data.table (>= 1.8.0) 
+Depends: R (>= 2.10.0)
+Imports: data.table (>= 1.8.0)
 Author: Damian W. Betebenner <dbetebenner@nciea.org>
 Maintainer: Damian W. Betebenner <dbetebenner@nciea.org>
-Description: Function for generating random gender and ethnicity correct first and/or last names. Names are chosen proportionally based upon their probability of appearing in a large scale data base of real names.  
-URL: https://github.com/CenterForAssessment/randomNames, http://cran.r-project.org/package=randomNames
+Description: Function for generating random gender and ethnicity correct first and/or last names. Names are chosen proportionally based upon their probability of appearing in a large scale data base of real names.
+URL: https://github.com/CenterForAssessment/randomNames, https://cran.r-project.org/package=randomNames
 BugReports: https://github.com/CenterForAssessment/randomNames/issues
 LazyLoad: Yes
 LazyData: Yes
 ByteCompile: TRUE
-License: GPL-3 
+License: GPL-3

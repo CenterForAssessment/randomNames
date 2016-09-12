@@ -3,12 +3,12 @@ citHeader("To cite package 'randomNames' in publications use:")
 citEntry(entry = "Manual",
          title        = "{randomNames}: Function for Generating Random Names and a Dataset",
          author       = "Damian W. Betebenner",
-         year         = "2015",
-         note         = "R package version 0.1-0",
-         url          = "http://cran.r-project.org/package=randomNames",
-         
-         textVersion  = paste("Damian W. Betebenner (2015).",
+         year         = "2016",
+         note         = "R package version 0.2-0",
+         url          = "https://cran.r-project.org/package=randomNames",
+
+         textVersion  = paste("Damian W. Betebenner (2016).",
                         "randomNames: Function for Generating Random Names and a Dataset.",
-                        "(R package version 0.1-0.",
-                        "URL http://cran.r-project.org/package=randomNames")
+                        "(R package version 0.2-0.",
+                        "URL https://cran.r-project.org/package=randomNames")
 )
