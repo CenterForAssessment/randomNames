@@ -58,8 +58,10 @@ randomNames()  ## Returns a single name in "last, first" format
 
 randomNames(5, which.names="first") ## Returns 5 first names
 
-test.df <- data.frame(GENDER=round(runif(100)),
-	ETHNICITY=round(runif(100,min=1, max=5)))
+randomNames(5, return.complete.data=TRUE) ## Returns entire data.table
+
+test.df <- data.frame(GENDER=sample(0:1, 100, replace=TRUE),
+	ETHNICITY=sample(1:5, 100, replace=TRUE))
 
 test.names <- randomNames(gender=test.df$GENDER,
 	ethnicity=test.df$ETHNICITY)
