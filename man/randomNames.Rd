@@ -13,7 +13,8 @@ randomNames(n,
             which.names="both",
             name.order="last.first",
             name.sep=", ",
-            sample.with.replacement=TRUE)
+            sample.with.replacement=TRUE,
+            return.complete.data=FALSE)
 }
 
 \arguments{
@@ -28,7 +29,8 @@ randomNames(n,
   \code{ethnicity} is the number of random names returned. Note that the ethnicity vector is employed for both deriving first and last names. If no ethnicity vector
   is provided the function samples from all ethnicity to produce a sample of names. See examples for various use cases.
   }
-  \item{which.names}{OPTIONAL. One of \code{"both"} (the default), \code{"first"}, or \code{"last"} indicating what names to produce.
+  \item{which.names}{OPTIONAL. One of \code{"both"} (the default), \code{"first"}, or \code{"last"}, \code{"complete.data"} indicating what names to produce. \code{"complete.data"}
+  provides a data.table with \code{ethnicity} and \code{gender} codes.
   }
   \item{name.order}{OPTIONAL. If \code{which.names} is \code{"both"}, then names can be returned as either \code{"last.first"} (the default) or \code{"first.last"}.
   }
@@ -36,6 +38,8 @@ randomNames(n,
   }
   \item{sample.with.replacement}{Boolean argument (defaults to TRUE) indicating whether sampling is done with replacement.
   }
+  \item{return.complete.data}{Boolean argument (defaults to FALSE) indicating whether to return data including gender and ethnicity codes used for name construct. If set to TRUE,
+  data is returned as a data.frame/data.table.}
 }
 
 
