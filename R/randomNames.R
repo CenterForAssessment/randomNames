@@ -6,18 +6,19 @@ function(
 	which.names="both",
 	name.order="last.first",
 	name.sep=", ",
-	sample.with.replacement=TRUE) {
+	sample.with.replacement=TRUE,
+	return.complete.data=FALSE) {
 
-	.N <- V1 <- NULL ## To prevent R CMD check warnings
+	.N <- V1 <- first_name <- last_name <- NULL ## To prevent R CMD check warnings
 
 	first_names <- function(tmp.gender, tmp.ethnicity, tmp.number) {
-		tmp.gender <- tmp.gender[1]; tmp.ethnicity <- tmp.ethnicity[1]
+#		tmp.gender <- tmp.gender[1]; tmp.ethnicity <- tmp.ethnicity[1]
 		tmp <- randomNames::randomNamesData[[paste("first_names_e", tmp.ethnicity, "_g", tmp.gender, sep="")]]
 		suppressWarnings(sample(rownames(tmp), tmp.number, replace=sample.with.replacement, prob=tmp))
 	}
 
 	last_names <- function(tmp.ethnicity, tmp.number) {
-		tmp.ethnicity <- tmp.ethnicity[1]
+#		tmp.ethnicity <- tmp.ethnicity[1]
 		tmp <- randomNames::randomNamesData[[paste("last_names_e", tmp.ethnicity, sep="")]]
 		suppressWarnings(sample(rownames(tmp), tmp.number, replace=sample.with.replacement, prob=tmp))
 	}
@@ -57,24 +58,28 @@ function(
 		ethnicity <- tmp
 	}
 
-	gender[is.na(gender)] <- round(runif(length(gender[is.na(gender)])))
-	ethnicity[is.na(ethnicity)] <- round(runif(length(ethnicity[is.na(ethnicity)]),min=1,max=5))
+	gender[is.na(gender)] <- sample(0:1, length(gender[is.na(gender)]), replace=TRUE)
+	ethnicity[is.na(ethnicity)] <- sample(1:5, length(ethnicity[is.na(ethnicity)]), replace=TRUE)
 
 	tmp.dt <- data.table(seq.int(tmp.length), gender, ethnicity)
 	setkeyv(tmp.dt, c("gender", "ethnicity"))
 
 	if (which.names=="first" | which.names=="both") {
-		tmp.dt$tmp_first <- tmp.dt[,first_names(gender, ethnicity, .N), by=list(gender, ethnicity)]$V1
+		tmp.dt[,first_name:=first_names(gender, ethnicity, .N), by=list(gender, ethnicity)]
 	}
 
 	if (which.names=="last" | which.names=="both") {
-		tmp.dt$tmp_last <- tmp.dt[,last_names(ethnicity, .N), by=list(ethnicity)]$V1
+		tmp.dt[,last_name:=last_names(ethnicity, .N), by=list(ethnicity)]
 	}
 
 	setkey(tmp.dt, V1)
-	if (which.names=="first") return(tmp.dt$tmp_first)
-	if (which.names=="last") return(tmp.dt$tmp_last)
-	if (which.names=="both" & name.order=="last.first") return(paste(tmp.dt$tmp_last, tmp.dt$tmp_first, sep=name.sep))
-	if (which.names=="both" & name.order=="first.last") return(paste(tmp.dt$tmp_first, tmp.dt$tmp_last, sep=name.sep))
+	if (!return.complete.data) {
+		if (which.names=="first") return(tmp.dt$first_name)
+		if (which.names=="last") return(tmp.dt$last_name)
+		if (which.names=="both" & name.order=="last.first") return(paste(tmp.dt$last_name, tmp.dt$first_name, sep=name.sep))
+		if (which.names=="both" & name.order=="first.last") return(paste(tmp.dt$first_name, tmp.dt$last_name, sep=name.sep))
+	} else {
+		tmp.dt[,intersect(names(tmp.dt), c("ethnicity", "gender", "last_name", "first_name")), with=FALSE]
+	}
 
 } ## END randomNames Function

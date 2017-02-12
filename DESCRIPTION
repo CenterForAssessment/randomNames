@@ -1,6 +1,6 @@
 Package: randomNames
-Version: 0.2-0
-Date: 2016-9-9
+Version: 0.3-0
+Date: 2017-2-12
 Title: Function for Generating Random Names and a Dataset
 Depends: R (>= 2.10.0)
 Imports: data.table (>= 1.8.0)
