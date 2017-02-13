@@ -48,18 +48,19 @@ function(
 		gender <- tmp
 	}
 
-	if (!all(ethnicity %in% 1:5)) {
+	if (!all(ethnicity %in% 1:6)) {
 		tmp <- rep(NA, length(ethnicity))
 		tmp[grep("Indian|Alaska|Native American", ethnicity, ignore.case=TRUE)] <- 1
 		tmp[grep("Hawaii|Pacific|Asian", ethnicity, ignore.case=TRUE)] <- 2
 		tmp[grep("Black|African", ethnicity, ignore.case=TRUE)] <- 3
 		tmp[grep("Latino|Hispanic", ethnicity, ignore.case=TRUE)] <- 4
 		tmp[grep("White|Caucasian", ethnicity, ignore.case=TRUE)] <- 5
+		tmp[grep("Middle|Arabic", ethnicity, ignore.case=TRUE)] <- 6
 		ethnicity <- tmp
 	}
 
 	gender[is.na(gender)] <- sample(0:1, length(gender[is.na(gender)]), replace=TRUE)
-	ethnicity[is.na(ethnicity)] <- sample(1:5, length(ethnicity[is.na(ethnicity)]), replace=TRUE)
+	ethnicity[is.na(ethnicity)] <- sample(1:6, length(ethnicity[is.na(ethnicity)]), replace=TRUE)
 
 	tmp.dt <- data.table(seq.int(tmp.length), gender, ethnicity)
 	setkeyv(tmp.dt, c("gender", "ethnicity"))

@@ -12,8 +12,8 @@ a large scale database.
 \tabular{ll}{
 Package: \tab randomNames\cr
 Type: \tab Package\cr
-Version: \tab 0.3-0\cr
-Date: \tab 2017-2-12\cr
+Version: \tab 0.4-0\cr
+Date: \tab 2017-2-13\cr
 License: \tab GPL-3\cr
 LazyLoad: \tab yes\cr
 }
