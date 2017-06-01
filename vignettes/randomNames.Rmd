@@ -1,0 +1,12 @@
+---
+author: "Damian W Betebenner"
+title: "randomNames: Function for Generating Random Names and a Dataset"
+---
+
+# randomNames
+
+A simple vignette:
+
+* First bullet
+* Second bullet
+* Third bullet

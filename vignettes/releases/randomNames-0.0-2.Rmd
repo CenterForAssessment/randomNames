@@ -1,0 +1,26 @@
+---
+title: "randomNames 0.0-2"
+---
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(comment = "#>", collapse = TRUE)
+```
+
+
+We're pleased to announce the second release of the **randomNames** package. The package isn't availabe on [CRAN](https://CRAN.R-project.org/package=randomNames)
+yet so you'll need to install it off of GitHub.
+
+```
+devtools::install_github("centerforassessment/randomNames")
+```
+
+There’s not much to the **randomNames** package: Just a single function `randomNames`.
+
+```r
+library(randomNames)
+print(randomNames(5))
+```
+
+You can see the documentation for more info on the `randomNames` arguments.
+
+**randomNames** is under active development. 

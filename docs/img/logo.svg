@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="86px" height="85px" viewBox="0 0 86 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>CFA_Logo_WHITE_BACKGROUND</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0.58,37.3443771 C0.738991206,26.8599431 6.75286605,16.8593498 16.876,12.139 L41.098,0.844 L42.459,0.209 L54,24.9525636 L54,50.4343109 C51.2464274,55.9064587 46.705834,60.5260804 40.736,63.31 C40.2044261,63.5579623 39.668981,63.7878779 39.1303593,64 L18.5188994,64 L18.5188994,64 C11.9968822,61.4481772 6.40539709,56.4874219 3.219,49.655 C1.48945131,45.9455559 0.638420054,42.0476012 0.58,38.197178 L0.58,37.3443771 L0.58,37.3443771 Z" id="path-1"></path>
+        <polygon id="path-3" points="0.576766264 64 54 64 54 0.209 0.576766264 0.209 0.576766264 64"></polygon>
+        <polygon id="path-5" points="0.249010758 65 23.682 0.626 0.249010758 65"></polygon>
+        <polygon id="path-7" points="48.527 1.42108547e-14 48.527 64.374 0 64.374 1.42108547e-14 0 48.527 0"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="CFA_Logo_WHITE_BACKGROUND">
+            <g id="Group-5">
+                <polygon id="Fill-1" fill="#FFFFFF" points="0.06 82 86 82 86 0.04 0.06 0.04"></polygon>
+                <path d="M62.128,29.718 C56.467,17.576 42.036,12.323 29.896,17.984 C17.755,23.646 12.503,38.077 18.164,50.218 C23.825,62.357 38.257,67.61 50.397,61.949 C62.537,56.288 67.789,41.857 62.128,29.718 Z M73.708,52.181 C80.454,33.647 70.897,13.151 52.362,6.405 C33.828,-0.339 13.333,9.215 6.587,27.75 C-0.159,46.285 9.397,66.781 27.932,73.527 C46.467,80.273 66.962,70.717 73.708,52.181 Z" id="Stroke-3" stroke="#000000" stroke-width="7"></path>
+                <path d="M72.15,24.112 C68.219,16.173 61.345,9.675 52.362,6.405" id="Stroke-4" stroke="#000000" stroke-width="6.3"></path>
+            </g>
+            <g id="Group-9" transform="translate(32.000000, 18.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-7"></g>
+                <polygon id="Fill-6" fill="#1C9B48" mask="url(#mask-2)" points="0.58 64 54.1 64 54.1 0.16 0.58 0.16"></polygon>
+                <polygon id="Fill-8" fill="#1C9B48" mask="url(#mask-2)" points="0.58 64 54.1 64 54.1 0.16 0.58 0.16"></polygon>
+            </g>
+            <g id="Group-12" transform="translate(32.000000, 18.000000)">
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <g id="Clip-11"></g>
+                <path d="M41.098,0.844 L16.876,12.139 C2.769,18.717 -3.358,35.549 3.219,49.655 C9.798,63.762 26.63,69.89 40.736,63.31 C54.844,56.731 60.97,39.9 54.392,25.793 L42.459,0.209 L41.098,0.844 Z" id="Stroke-10" stroke="#FFFFFF" stroke-width="5.25" mask="url(#mask-4)"></path>
+            </g>
+            <g id="Group-15" transform="translate(51.000000, 17.000000)">
+                <mask id="mask-6" fill="white">
+                    <use xlink:href="#path-5"></use>
+                </mask>
+                <g id="Clip-14"></g>
+                <polygon id="Fill-13" fill="#1C9B48" mask="url(#mask-6)" points="0.18 65 23.7 65 23.7 0.56 0.18 0.56"></polygon>
+            </g>
+            <g id="Group-19" transform="translate(32.000000, 21.000000)">
+                <mask id="mask-8" fill="white">
+                    <use xlink:href="#path-7"></use>
+                </mask>
+                <g id="Clip-17"></g>
+                <path d="M42.682,-3.374 L18.624,62.717 M5.473,13.791 L23.021,51.423 L55.44,36.301" id="Stroke-16" stroke="#FFFFFF" stroke-width="5" mask="url(#mask-8)"></path>
+                <polyline id="Stroke-18" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round" mask="url(#mask-8)" points="22.701 8.254 31.705 27.562 50.539 18.776"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,50 @@
+template:
+  package: centerPackageTemplate
+  default_assets: false
+
+
+home:
+  strip_header: true
+  links:
+    - text: Learn more
+      href: https://centerforassessment.github.io/randomNames
+
+
+navbar:
+    title: ~
+    type: default
+    left:
+    - text: Getting Started
+      href: articles/index.html
+    - text: Reference
+      href: reference/index.html
+    - text: News
+      menu:
+      - text: "Release notes"
+      - text: "Version 0.0-5"
+        href: articles/releases/randomNames-0.0-5.html
+      - text: "Version 0.0-4"
+        href: articles/releases/randomNames-0.0-4.html
+      - text: "Version 0.0-3"
+        href: articles/releases/randomNames-0.0-3.html
+      - text: "Version 0.0-2"
+        href: articles/releases/randomNames-0.0-2.html
+      - text: "Version 0.0-1"
+        href: articles/releases/randomNames-0.0-1.html
+      - text: "------------------"
+      - text: "Change log"
+        href: news/index.html
+    right:
+      - icon: fa-github fa-2x
+        href: https://github.com/centerforassessment/randomNames
+
+
+reference:
+      - title: Random name generation
+        desc:  Function to generate random names.
+        contents:
+            - randomNames
+      - title: Random name data set
+        desc: Internal data set used to create random names.
+        contents:
+            - randomNamesData
