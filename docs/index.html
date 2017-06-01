@@ -110,6 +110,20 @@
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
+<pre><code>&gt; randomNames(5) ## 5 randome first and last names
+[1] "Mossberg, Cassie"  "Mendiaz, Victoria" "Miner, Cassidy"    "Austin, Brook"     "Babcock, Lloyd"
+
+&gt; randomNames(5, gender=1) ## 5 female first and last names
+[1] "Bruckner, Birva"   "Caringer, Madelyn" "Mendoza, Rebecca"  "el-Haque, Jaleela" "Williams, Miranda"
+
+&gt; randomNames(5, gender=0) ## 5 male first and last names
+[1] "al-Salam, Rida"    "Debus, Kai"        "al-Aly, Jaabir"    "Garces, Markus"    "Robertson, Trevor"
+
+&gt; randomNames(5, gender=0, ethnicity=3) ## 5 African American, male first and last names
+[1] "Bashir, Shaquille" "Ursery, Keilan"    "Marlow, Marvin"    "Bell, Daishavon"   "Hammond, Kyle"
+
+&gt; randomNames(5, gender=1, ethnicity=6, which.names="first") ## 5 Middle Eastern, male first names
+[1] "Jawhara"  "Raaniya"  "Ghaada"   "Ghazaala" "Raabia"</code></pre>
 </div>
 <div id="resources" class="section level2">
 <h2 class="hasAnchor">
