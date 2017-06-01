@@ -31,6 +31,21 @@ devtools::install_github("CenterForAssessment/randomNames")
 
 ## Usage
 
+```
+> randomNames(5)
+[1] "Mossberg, Cassie"  "Mendiaz, Victoria" "Miner, Cassidy"    "Austin, Brook"     "Babcock, Lloyd"
+
+> randomNames(5, gender=1) ## 5 female names
+[1] "Bruckner, Birva"   "Caringer, Madelyn" "Mendoza, Rebecca"  "el-Haque, Jaleela" "Williams, Miranda"
+
+> randomNames(5, gender=0) ## 5 male names
+[1] "al-Salam, Rida"    "Debus, Kai"        "al-Aly, Jaabir"    "Garces, Markus"    "Robertson, Trevor"
+
+> randomNames(5, gender=0, ethnicity=3) ## 5 African American, female names
+[1] "Bashir, Shaquille" "Ursery, Keilan"    "Marlow, Marvin"    "Bell, Daishavon"   "Hammond, Kyle"
+```
+
+
 ## Resources
 
 * [randomNames GitHub Pages](https://CenterForAssessment.github.io/randomNames)
