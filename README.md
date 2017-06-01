@@ -2,7 +2,7 @@
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/centerforassessment/Literasee?branch=master&svg=true)](https://ci.appveyor.com/project/centerforassessment/Literasee)
 [![Join the chat at https://gitter.im/CenterForAssessment/randomNames](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/CenterForAssessment/randomNames?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/randomNames)](http://cran.r-project.org/package=randomNames)
-[![Development Version](https://img.shields.io/badge/devel-0.0--0.4-brightgreen.svg)](https://github.com/CenterForAssessment/randomNames)
+[![Development Version](https://img.shields.io/badge/devel-0.5--0-brightgreen.svg)](https://github.com/CenterForAssessment/randomNames)
 [![Rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/grand-total/randomNames)](https://github.com/metacran/cranlogs.app)
 [![License](http://img.shields.io/badge/license-GPL%203-brightgreen.svg?style=flat)](https://github.com/CenterForAssessment/randomNames/blob/master/LICENSE.md)
 
