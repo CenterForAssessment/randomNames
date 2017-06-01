@@ -32,17 +32,20 @@ devtools::install_github("CenterForAssessment/randomNames")
 ## Usage
 
 ```
-> randomNames(5)
+> randomNames(5) ## 5 randome first and last names
 [1] "Mossberg, Cassie"  "Mendiaz, Victoria" "Miner, Cassidy"    "Austin, Brook"     "Babcock, Lloyd"
 
-> randomNames(5, gender=1) ## 5 female names
+> randomNames(5, gender=1) ## 5 female first and last names
 [1] "Bruckner, Birva"   "Caringer, Madelyn" "Mendoza, Rebecca"  "el-Haque, Jaleela" "Williams, Miranda"
 
-> randomNames(5, gender=0) ## 5 male names
+> randomNames(5, gender=0) ## 5 male first and last names
 [1] "al-Salam, Rida"    "Debus, Kai"        "al-Aly, Jaabir"    "Garces, Markus"    "Robertson, Trevor"
 
-> randomNames(5, gender=0, ethnicity=3) ## 5 African American, female names
+> randomNames(5, gender=0, ethnicity=3) ## 5 African American, male first and last names
 [1] "Bashir, Shaquille" "Ursery, Keilan"    "Marlow, Marvin"    "Bell, Daishavon"   "Hammond, Kyle"
+
+> randomNames(5, gender=1, ethnicity=6, which.names="first") ## 5 Middle Eastern, male first names
+[1] "Jawhara"  "Raaniya"  "Ghaada"   "Ghazaala" "Raabia"
 ```
 
 
