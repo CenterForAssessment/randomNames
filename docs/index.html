@@ -31,7 +31,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="articles/index.html">Getting Started</a>
+  <a href="articles/randomNames.html">Getting Started</a>
 </li>
 <li>
   <a href="reference/index.html">Reference</a>
@@ -94,32 +94,32 @@
 <a href="#installation" class="anchor"></a>Installation</h2>
 <div id="from-cran" class="section level3">
 <h3 class="hasAnchor">
-<a href="#from-cran" class="anchor"></a>From <a href="https://CRAN.R-project.org">CRAN</a>
+<a href="#from-cran" class="anchor"></a>From <a href="https://CRAN.R-project.org/package=randomNames">CRAN</a>
 </h3>
-<p>To install the latest stable release from <a href="https://cran.r-project.org/package=randomNames">CRAN</a></p>
+<p>To install the latest stable release of <strong>randomNames</strong> from <a href="https://CRAN.R-project.org/package=randomNames">CRAN</a></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">"randomNames"</span>)</code></pre></div>
 </div>
 <div id="from-github" class="section level3">
 <h3 class="hasAnchor">
 <a href="#from-github" class="anchor"></a>From <a href="https://github.com/CenterForAssessment/randomNames/">Github</a>
 </h3>
-<p>To install the development version of <strong>randomNames</strong>:</p>
+<p>To install the development release of <strong>randomNames</strong> from <a href="https://github.com/CenterForAssessment/randomNames/">GitHub</a>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"CenterForAssessment/randomNames"</span>)</code></pre></div>
 </div>
 </div>
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
-<pre><code>&gt; randomNames(5) ## 5 randome first and last names
+<pre><code>&gt; randomNames(5) ## 5 first, last names
 [1] "Mossberg, Cassie"  "Mendiaz, Victoria" "Miner, Cassidy"    "Austin, Brook"     "Babcock, Lloyd"
 
-&gt; randomNames(5, gender=1) ## 5 female first and last names
+&gt; randomNames(5, gender=1) ## 5 female first, last names
 [1] "Bruckner, Birva"   "Caringer, Madelyn" "Mendoza, Rebecca"  "el-Haque, Jaleela" "Williams, Miranda"
 
-&gt; randomNames(5, gender=0) ## 5 male first and last names
+&gt; randomNames(5, gender=0) ## 5 male first, last names
 [1] "al-Salam, Rida"    "Debus, Kai"        "al-Aly, Jaabir"    "Garces, Markus"    "Robertson, Trevor"
 
-&gt; randomNames(5, gender=0, ethnicity=3) ## 5 African American, male first and last names
+&gt; randomNames(5, gender=0, ethnicity=3) ## 5 African American, male first, last names
 [1] "Bashir, Shaquille" "Ursery, Keilan"    "Marlow, Marvin"    "Bell, Daishavon"   "Hammond, Kyle"
 
 &gt; randomNames(5, gender=1, ethnicity=6, which.names="first") ## 5 Middle Eastern, male first names
