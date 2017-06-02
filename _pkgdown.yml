@@ -15,7 +15,7 @@ navbar:
     type: default
     left:
     - text: Getting Started
-      href: articles/index.html
+      href: articles/randomNames.html
     - text: Reference
       href: reference/index.html
     - text: News
