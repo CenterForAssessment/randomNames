@@ -21,14 +21,8 @@ navbar:
     - text: News
       menu:
       - text: "Release notes"
-      - text: "Version 0.0-5"
-        href: articles/releases/randomNames-0.0-5.html
-      - text: "Version 0.0-4"
-        href: articles/releases/randomNames-0.0-4.html
-      - text: "Version 0.0-3"
-        href: articles/releases/randomNames-0.0-3.html
-      - text: "Version 0.0-2"
-        href: articles/releases/randomNames-0.0-2.html
+      - text: "Version 1.0-0"
+        href: articles/releases/randomNames-1.0-0.html
       - text: "Version 0.0-1"
         href: articles/releases/randomNames-0.0-1.html
       - text: "------------------"

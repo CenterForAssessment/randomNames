@@ -1,5 +1,5 @@
 ---
-title: "randomNames 0.0-4"
+title: "randomNames 0.0-1"
 ---
 
 ```{r, echo = FALSE}
@@ -7,7 +7,7 @@ knitr::opts_chunk$set(comment = "#>", collapse = TRUE)
 ```
 
 
-We're pleased to announce the fourth release of the **randomNames** package. The package isn't availabe on [CRAN](https://CRAN.R-project.org/package=randomNames)
+We're pleased to announce the first release of the **randomNames** package. The package isn't availabe on [CRAN](https://CRAN.R-project.org/package=randomNames)
 yet so you'll need to install it off of GitHub.
 
 ```

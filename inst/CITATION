@@ -1,4 +1,4 @@
-citHeader("To cite package 'randomNames' in publications use:")
+citHeader("To cite package 'randomNames' in publications, please use:")
 
 citEntry(entry = "Manual",
          title        = "{randomNames}: Function for Generating Random Names and a Dataset",
