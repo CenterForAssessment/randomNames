@@ -166,6 +166,18 @@ footer .author {
   text-align: right;
 }
 
+.row a {
+  padding: 0;
+  color: #778;
+  background-color: transparent;
+}
+
+.row a:hover {
+  background-color: transparent;
+  text-decoration: none;
+  color: black;
+}
+
 .packagePages a {
   padding: 0;
   color: #778;
