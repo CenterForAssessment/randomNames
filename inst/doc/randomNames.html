@@ -12,12 +12,50 @@
 
 <meta name="author" content="Damian W Betebenner" />
 
-<meta name="date" content="2017-06-02" />
+<meta name="date" content="2017-06-05" />
 
 <title></title>
 
 
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 
 
@@ -33,14 +71,78 @@
 
 
 
-<div id="randomnames" class="section level1">
-<h1>randomNames</h1>
-<p>A simple vignette:</p>
-<ul>
-<li>First bullet</li>
-<li>Second bullet</li>
-<li>Third bullet</li>
-</ul>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>The <strong>randomNames</strong> package contains a single function allowing users to generate proportionally correct, gender and ethnicity specific first and last names. The package contains an embedded data set of names that is based upon a large scale data set of names from the United States where the ethnicity and gender of the person was identified. The embedded data set includes information about ethnicity, gender (first name), and the probability of the name occurring in the data set. Random names are often useful in situations where one needs to share personal information but needs to obscure the identity of the person to whom the data belongs.</p>
+</div>
+<div id="use" class="section level2">
+<h2>Use</h2>
+<p>After <a href="https://dbetebenner.github.io/randomNames/index.html#installation">installing</a> the package from either CRAN or GitHub, it’s simple to generate random names using the following simple instructions.</p>
+<p>By default, the <code>randomNames</code> function supplies a single random last and first name separated by a comma:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">randomNames</span>()
+## [1] &quot;Evans, Germaine&quot;</code></pre></div>
+<p>To generate more random names, just supply a positive integer to the <code>randomNames</code> function:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">randomNames</span>(<span class="dv">5</span>)
+## [1] &quot;Troxel, Briana&quot;         &quot;el-Baccus, Mahuroos&quot;   
+## [3] &quot;Slee Ackerson, Mikayla&quot; &quot;al-Rassi, Rasheeq&quot;     
+## [5] &quot;Fox, Justis&quot;</code></pre></div>
+<div id="additional-output-control" class="section level3">
+<h3>Additional output control</h3>
+<p>The <strong>randomNames</strong> function accepts several arguments including <code>n</code>, <code>gender</code>, <code>ethnicity</code>, <code>which.names</code>, <code>name.order</code>, and <code>name.sep</code>.</p>
+<pre><code>randomNames(n,
+            gender,
+            ethnicity,
+            which.names=&quot;both&quot;,
+            name.order=&quot;last.first&quot;,
+            name.sep=&quot;, &quot;,
+            sample.with.replacement=TRUE,
+            return.complete.data=FALSE)</code></pre>
+<p>For complete documentation on values accepted for arguments, see the <a href="https://CenterForAssessment.github.io/randomNames/reference/randomNames.html">function documentation</a></p>
+</div>
+<div id="examples" class="section level3">
+<h3>Examples</h3>
+<p>The first argument, <code>n</code>, controls the number of names returned by the <strong>randomNames</strong> function:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">randomNames</span>(<span class="dv">5</span>) ## 5 last, first names
+## [1] &quot;Yang, Shivani&quot;    &quot;Turco, Adam&quot;      &quot;al-Ben, Ameer&quot;   
+## [4] &quot;Shatzer, Hali&quot;    &quot;Johnson, Tiffany&quot;</code></pre></div>
+<p>The second argument, <code>gender</code>, controls the gender (0=male, 1=female) of the first names returned. This argument can be a vector up to the same length as the number of names requested.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">randomNames</span>(<span class="dv">5</span>, <span class="dt">gender=</span><span class="dv">1</span>) ## 5 female last, first names
+## [1] &quot;Marshall, Sunshine&quot; &quot;King, Dallas&quot;       &quot;Leatherman, Tricia&quot;
+## [4] &quot;Payan, Chelsey&quot;     &quot;Vargas, Destiny&quot;
+
+<span class="kw">randomNames</span>(<span class="dv">5</span>, <span class="dt">gender=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>)) ## 2 male  and 3 female last, first names
+## [1] &quot;Glasgow, Humza&quot;                 &quot;Ellis, Chase&quot;                  
+## [3] &quot;Proa, Rosa&quot;                     &quot;Bonnifield-Thrasher, Bradleigh&quot;
+## [5] &quot;al-Abdella, Nawfa&quot;</code></pre></div>
+<p>The third argument, <code>ethnicity</code>, controls the ethnicity of the names returned. The following integer codes/ethnicities are accepted:</p>
+<ol style="list-style-type: decimal">
+<li>American Indian or Native Alaskan</li>
+<li>Asian or Pacific Islander</li>
+<li>Black (not Hispanic)</li>
+<li>Hispanic</li>
+<li>White (not Hispanic)</li>
+<li>Middle-Eastern, Arabic</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">randomNames</span>(<span class="dv">5</span>, <span class="dt">gender=</span><span class="dv">0</span>, <span class="dt">ethnicity=</span><span class="dv">3</span>) ## 5 African American, male last, first names
+## [1] &quot;Brooks-Jeremiah, Christopher&quot; &quot;Hopson, Tyler&quot;               
+## [3] &quot;Walker, Christopher&quot;          &quot;Tyler, Elijah&quot;               
+## [5] &quot;Cook, Tyler&quot;</code></pre></div>
+<p>The fourth argument, <code>which.names</code> controls which names are returned. The argument accepts the values: <code>both</code> (the default), <code>last</code>, <code>first</code>, or <code>complete.data</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">randomNames</span>(<span class="dv">5</span>, <span class="dt">gender=</span><span class="dv">1</span>, <span class="dt">ethnicity=</span><span class="dv">6</span>, <span class="dt">which.names=</span><span class="st">&quot;first&quot;</span>) ## 5 Middle Eastern/Arabic, female first names
+## [1] &quot;Raabiya&quot; &quot;Najwa&quot;   &quot;Saamiqa&quot; &quot;Sundus&quot;  &quot;Ghaada&quot;</code></pre></div>
+<p>The fifth argument, <code>name.order</code>, controls the order in which the names are returned. The argument is only relevant if <code>which.names=both</code>. The argument accepts the values: <code>last.first</code> (the default) and <code>first.last</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">randomNames</span>(<span class="dv">5</span>, <span class="dt">gender=</span><span class="dv">1</span>, <span class="dt">ethnicity=</span><span class="dv">6</span>, <span class="dt">name.order=</span><span class="st">&quot;first.last&quot;</span>) ## 5 first last names
+## [1] &quot;Zakiyya, el-Ishmael&quot; &quot;Nabeeha, al-Ally&quot;    &quot;Musheera, al-Rahman&quot;
+## [4] &quot;Maimoona, al-Yamin&quot;  &quot;Hiwaaya, el-Omar&quot;</code></pre></div>
+<p>The sixth argument, <code>name.sep</code>, is a character string that controls the separator used when <code>both</code> names are returned. The default separator is <code>,</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">randomNames</span>(<span class="dv">5</span>, <span class="dt">gender=</span><span class="dv">1</span>, <span class="dt">ethnicity=</span><span class="dv">6</span>, <span class="dt">name.order=</span><span class="st">&quot;first.last&quot;</span>, <span class="dt">name.sep=</span><span class="st">&quot; &quot;</span>) ## 5 first last names separated by a space
+## [1] &quot;Atheer el-Halaby&quot;  &quot;Nabeeha al-Sharif&quot; &quot;Hawraa al-Rahim&quot;  
+## [4] &quot;Safwa el-Amin&quot;     &quot;Raafida al-Farha&quot;</code></pre></div>
+</div>
+</div>
+<div id="contributions-requests" class="section level2">
+<h2>Contributions &amp; Requests</h2>
+<p>If you have contribution or a feature request for the <strong>randomNames</strong> package, don’t hesitate to write or set up an <a href="https://github.com/CenterForAssessment/randomNames/issues">issue on GitHub</a>.</p>
 </div>
 
 
