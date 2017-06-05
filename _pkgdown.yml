@@ -31,6 +31,8 @@ navbar:
     right:
       - icon: fa-github fa-2x
         href: https://github.com/centerforassessment/randomNames
+      - icon: fa-twitter fa-2x
+        href: https://twitter.com
 
 
 reference:
