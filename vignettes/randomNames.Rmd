@@ -3,15 +3,116 @@ author: "Damian W Betebenner"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Literasee: Assessment Literacy content development via R}
+  %\VignetteIndexEntry{Getting started with randomNames}
   %\VignetteEngine{knitr::rmarkdown}
   %\usepackage[utf8]{inputenc}
 ---
 
-# randomNames
+```{r include = FALSE}
+library(randomNames)
+knitr::opts_chunk$set(
+    collapse = TRUE,
+    fig.dpi = 96
+			)
+```
 
-A simple vignette:
+## Introduction
 
-* First bullet
-* Second bullet
-* Third bullet
+The **randomNames** package contains a single function allowing users to generate proportionally correct, gender and ethnicity specific first
+and last names. The package contains an embedded data set of names that is based upon a large scale data set of names from the United States
+where the ethnicity and gender of the person was identified. The embedded data set includes information about ethnicity, gender (first name),
+and the probability of the name occurring in the data set. Random names are often useful in situations where one needs to share personal information
+but needs to obscure the identity of the person to whom the data belongs.
+
+
+## Use
+
+After [installing](https://dbetebenner.github.io/randomNames/index.html#installation) the package from either CRAN
+or GitHub, it's simple to generate random names using the following simple instructions.
+
+By default, the `randomNames` function supplies a single random last and first name separated by a comma:
+
+```{r}
+randomNames()
+```
+
+To generate more random names, just supply a positive integer to the `randomNames` function:
+
+```{r}
+randomNames(5)
+```
+
+
+### Additional output control
+
+The **randomNames** function accepts several arguments including `n`, `gender`, `ethnicity`, `which.names`, `name.order`, and `name.sep`.
+
+```
+randomNames(n,
+            gender,
+            ethnicity,
+            which.names="both",
+            name.order="last.first",
+            name.sep=", ",
+            sample.with.replacement=TRUE,
+            return.complete.data=FALSE)
+```
+
+For complete documentation on values accepted for arguments, see the [function documentation](https://CenterForAssessment.github.io/randomNames/reference/randomNames.html)
+
+### Examples
+
+The first argument, `n`, controls the number of names returned by the **randomNames** function:
+
+```{r}
+randomNames(5) ## 5 last, first names
+```
+
+The second argument, `gender`, controls the gender (0=male, 1=female) of the first names returned. This argument can be a vector up to the same length as
+the number of names requested.
+
+```{r}
+randomNames(5, gender=1) ## 5 female last, first names
+
+randomNames(5, gender=c(0,0,1,1,1)) ## 2 male  and 3 female last, first names
+```
+
+
+The third argument, `ethnicity`, controls the ethnicity of the names returned. The following integer codes/ethnicities are accepted:
+
+1. American Indian or Native Alaskan
+2. Asian or Pacific Islander
+3. Black (not Hispanic)
+4. Hispanic
+5. White (not Hispanic)
+6. Middle-Eastern, Arabic
+
+```{r}
+randomNames(5, gender=0, ethnicity=3) ## 5 African American, male last, first names
+```
+
+
+The fourth argument, `which.names` controls which names are returned. The argument accepts the values: `both` (the default), `last`, `first`, or `complete.data`
+
+```{r}
+randomNames(5, gender=1, ethnicity=6, which.names="first") ## 5 Middle Eastern/Arabic, female first names
+```
+
+
+The fifth argument, `name.order`, controls the order in which the names are returned. The argument is only relevant if `which.names=both`.
+The argument accepts the values: `last.first` (the default) and `first.last`.
+
+```{r}
+randomNames(5, gender=1, ethnicity=6, name.order="first.last") ## 5 first last names
+```
+
+The sixth argument, `name.sep`, is a character string that controls the separator used when `both` names are returned. The default separator is `, `.
+
+```{r}
+randomNames(5, gender=1, ethnicity=6, name.order="first.last", name.sep=" ") ## 5 first last names separated by a space
+```
+
+
+## Contributions & Requests
+
+If you have contribution or a feature request for the **randomNames** package, don't hesitate to write or set up an [issue on GitHub](https://github.com/CenterForAssessment/randomNames/issues).

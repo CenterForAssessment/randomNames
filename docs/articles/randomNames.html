@@ -77,21 +77,86 @@
       <h1></h1>
                         <h4 class="author">Damian W Betebenner</h4>
             
-            <h4 class="date">2017-06-03</h4>
+            <h4 class="date">2017-06-05</h4>
           </div>
 
     
     
 <div class="contents">
-<div id="randomnames" class="section level1">
-<h1 class="hasAnchor">
-<a href="#randomnames" class="anchor"></a>randomNames</h1>
-<p>A simple vignette:</p>
-<ul>
-<li>First bullet</li>
-<li>Second bullet</li>
-<li>Third bullet</li>
-</ul>
+<div id="introduction" class="section level2">
+<h2 class="hasAnchor">
+<a href="#introduction" class="anchor"></a>Introduction</h2>
+<p>The <strong>randomNames</strong> package contains a single function allowing users to generate proportionally correct, gender and ethnicity specific first and last names. The package contains an embedded data set of names that is based upon a large scale data set of names from the United States where the ethnicity and gender of the person was identified. The embedded data set includes information about ethnicity, gender (first name), and the probability of the name occurring in the data set. Random names are often useful in situations where one needs to share personal information but needs to obscure the identity of the person to whom the data belongs.</p>
+</div>
+<div id="use" class="section level2">
+<h2 class="hasAnchor">
+<a href="#use" class="anchor"></a>Use</h2>
+<p>After <a href="https://dbetebenner.github.io/randomNames/index.html#installation">installing</a> the package from either CRAN or GitHub, it’s simple to generate random names using the following simple instructions.</p>
+<p>By default, the <code>randomNames</code> function supplies a single random last and first name separated by a comma:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/randomNames.html">randomNames</a></span>()
+## [1] "al-Abdo, Hakam"</code></pre></div>
+<p>To generate more random names, just supply a positive integer to the <code>randomNames</code> function:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/randomNames.html">randomNames</a></span>(<span class="dv">5</span>)
+## [1] "el-Abraham, Nuha"  "Graves, Eric"      "Hawk, Aaryn"      
+## [4] "Stickney, Morgan"  "al-Rahaman, Yahya"</code></pre></div>
+<div id="additional-output-control" class="section level3">
+<h3 class="hasAnchor">
+<a href="#additional-output-control" class="anchor"></a>Additional output control</h3>
+<p>The <strong>randomNames</strong> function accepts several arguments including <code>n</code>, <code>gender</code>, <code>ethnicity</code>, <code>which.names</code>, <code>name.order</code>, and <code>name.sep</code>.</p>
+<pre><code><a href="../reference/randomNames.html">randomNames(n,
+            gender,
+            ethnicity,
+            which.names="both",
+            name.order="last.first",
+            name.sep=", ",
+            sample.with.replacement=TRUE,
+            return.complete.data=FALSE)</a></code></pre>
+<p>For complete documentation on values accepted for arguments, see the <a href="https://CenterForAssessment.github.io/randomNames/reference/randomNames.html">function documentation</a></p>
+</div>
+<div id="examples" class="section level3">
+<h3 class="hasAnchor">
+<a href="#examples" class="anchor"></a>Examples</h3>
+<p>The first argument, <code>n</code>, controls the number of names returned by the <strong>randomNames</strong> function:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/randomNames.html">randomNames</a></span>(<span class="dv">5</span>) ## 5 last, first names
+## [1] "Baek, Manoj"         "Vincent, Jera"       "al-Mourad, Ghaaliba"
+## [4] "Lozano, Ashlin"      "Moore, Ashley"</code></pre></div>
+<p>The second argument, <code>gender</code>, controls the gender (0=male, 1=female) of the first names returned. This argument can be a vector up to the same length as the number of names requested.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/randomNames.html">randomNames</a></span>(<span class="dv">5</span>, <span class="dt">gender=</span><span class="dv">1</span>) ## 5 female last, first names
+## [1] "Don, Emily"       "Watson, Kalaysha" "Burke, Shyloah"  
+## [4] "Nguyen, Sasha"    "Carson, Alicia"
+
+<span class="kw"><a href="../reference/randomNames.html">randomNames</a></span>(<span class="dv">5</span>, <span class="dt">gender=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>)) ## 2 male  and 3 female last, first names
+## [1] "Delgado, Osue"      "Glenn, Christopher" "Whyte, Megan"      
+## [4] "Chin, Meera"        "Nguyen, Virginia"</code></pre></div>
+<p>The third argument, <code>ethnicity</code>, controls the ethnicity of the names returned. The following integer codes/ethnicities are accepted:</p>
+<ol style="list-style-type: decimal">
+<li>American Indian or Native Alaskan</li>
+<li>Asian or Pacific Islander</li>
+<li>Black (not Hispanic)</li>
+<li>Hispanic</li>
+<li>White (not Hispanic)</li>
+<li>Middle-Eastern, Arabic</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/randomNames.html">randomNames</a></span>(<span class="dv">5</span>, <span class="dt">gender=</span><span class="dv">0</span>, <span class="dt">ethnicity=</span><span class="dv">3</span>) ## 5 African American, male last, first names
+## [1] "Stewart, Branden"  "Yankana, Nicholes" "Parker, Robert"   
+## [4] "Turman, Jawan"     "Caldwell, Darrion"</code></pre></div>
+<p>The fourth argument, <code>which.names</code> controls which names are returned. The argument accepts the values: <code>both</code> (the default), <code>last</code>, <code>first</code>, or <code>complete.data</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/randomNames.html">randomNames</a></span>(<span class="dv">5</span>, <span class="dt">gender=</span><span class="dv">1</span>, <span class="dt">ethnicity=</span><span class="dv">6</span>, <span class="dt">which.names=</span><span class="st">"first"</span>) ## 5 Middle Eastern/Arabic, female first names
+## [1] "Sireen"  "Sawada"  "Lubaaba" "Raadiya" "Nabeeha"</code></pre></div>
+<p>The fifth argument, <code>name.order</code>, controls the order in which the names are returned. The argument is only relevant if <code>which.names=both</code>. The argument accepts the values: <code>last.first</code> (the default) and <code>first.last</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/randomNames.html">randomNames</a></span>(<span class="dv">5</span>, <span class="dt">gender=</span><span class="dv">1</span>, <span class="dt">ethnicity=</span><span class="dv">6</span>, <span class="dt">name.order=</span><span class="st">"first.last"</span>) ## 5 first last names
+## [1] "Aaida, el-Omar"     "Muna, el-Mahfouz"   "Tameema, el-Mansur"
+## [4] "Mawhiba, el-Mady"   "Mubaaraka, al-Bari"</code></pre></div>
+<p>The sixth argument, <code>name.sep</code>, is a character string that controls the separator used when <code>both</code> names are returned. The default separator is <code>,</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/randomNames.html">randomNames</a></span>(<span class="dv">5</span>, <span class="dt">gender=</span><span class="dv">1</span>, <span class="dt">ethnicity=</span><span class="dv">6</span>, <span class="dt">name.order=</span><span class="st">"first.last"</span>, <span class="dt">name.sep=</span><span class="st">" "</span>) ## 5 first last names separated by a space
+## [1] "Laila el-Jabara"    "Rabdaa al-Bagheri"  "Rawda el-Shaheed"  
+## [4] "Waliyya al-Ibrahim" "Anbara al-Baddour"</code></pre></div>
+</div>
+</div>
+<div id="contributions-requests" class="section level2">
+<h2 class="hasAnchor">
+<a href="#contributions-requests" class="anchor"></a>Contributions &amp; Requests</h2>
+<p>If you have contribution or a feature request for the <strong>randomNames</strong> package, don’t hesitate to write or set up an <a href="https://github.com/CenterForAssessment/randomNames/issues">issue on GitHub</a>.</p>
 </div>
 </div>
   </div>
@@ -100,7 +165,9 @@
         <div id="tocnav">
       <h2>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
-<li><a href="#randomnames">randomNames</a></li>
+<li><a href="#introduction">Introduction</a></li>
+      <li><a href="#use">Use</a></li>
+      <li><a href="#contributions-requests">Contributions &amp; Requests</a></li>
       </ul>
 </div>
       </div>
