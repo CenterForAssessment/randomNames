@@ -1,6 +1,6 @@
 Package: randomNames
-Version: 0.6-0
-Date: 2017-6-2
+Version: 1.0-0
+Date: 2017-6-5
 Title: Function for Generating Random Names and a Dataset
 Depends: R (>= 2.10.0)
 Suggests: knitr
