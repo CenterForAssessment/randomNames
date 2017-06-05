@@ -257,3 +257,13 @@ a.anchor {
   text-decoration: none;
   color: black;
 }
+
+.fa-github {
+  font-size: 28px;
+  color: #444;
+}
+
+.fa-twitter {
+  font-size: 28px;
+  color: #444;
+}

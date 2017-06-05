@@ -4,11 +4,11 @@ citEntry(entry = "Manual",
          title        = "{randomNames}: Function for Generating Random Names and a Dataset",
          author       = "Damian W. Betebenner",
          year         = "2017",
-         note         = "R package version 1.0-0",
+         note         = "R package version 1.0-0.0",
          url          = "https://cran.r-project.org/package=randomNames",
 
          textVersion  = paste("Damian W. Betebenner (2017).",
                         "randomNames: Function for Generating Random Names and a Dataset.",
-                        "(R package version 1.0-0.",
+                        "(R package version 1.0-0.0",
                         "URL https://cran.r-project.org/package=randomNames")
 )
