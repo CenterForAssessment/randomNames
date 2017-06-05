@@ -2,6 +2,7 @@
 library(randomNames)
 knitr::opts_chunk$set(
     collapse = TRUE,
+    comment = ">",
     fig.dpi = 96
 			)
 
