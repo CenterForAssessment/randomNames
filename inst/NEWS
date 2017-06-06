@@ -1,6 +1,7 @@
-## randomNames 1.0-0
+## randomNames 1.0-0.0
 
-* Created real vignette and fixed everything up for a nice 1.0-0 release.
+* Changed numbering of releases from 3 to 4 digits.
+* Created real vignette and fixed everything up for a nice 1.0-0.0 release.
 
 ## randomNames 0.6-0
 
