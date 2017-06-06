@@ -1,5 +1,5 @@
 ---
-title: "randomNames 0.0-1"
+title: "randomNames 1.0-0.0"
 ---
 
 ```{r, echo = FALSE}
@@ -7,20 +7,9 @@ knitr::opts_chunk$set(comment = "#>", collapse = TRUE)
 ```
 
 
-We're pleased to announce the first release of the **randomNames** package. The package isn't availabe on [CRAN](https://CRAN.R-project.org/package=randomNames)
-yet so you'll need to install it off of GitHub.
+This is 1.0 release of the **randomNames** package. This release is mostly about the creation of vignettes and
+[web-documentation](https://CenterForAssessment.github.io/randomNames) for the package. However, the package now
+also support Middle Eastern/Arab names. See the new [Getting Started Vignette](https://centerforassessment.github.io/randomNames/articles/randomNames.html)
+for more information.
 
-```
-devtools::install_github("centerforassessment/randomNames")
-```
-
-There’s not much to the **randomNames** package: Just a single function `randomNames`.
-
-```r
-library(randomNames)
-print(randomNames(5))
-```
-
-You can see the documentation for more info on the `randomNames` arguments.
-
-**randomNames** is under active development.
+Feel free to drop me a line with any comments, feature requests, or ideas. And give us a Tweet using the Twitter button in the upper right!

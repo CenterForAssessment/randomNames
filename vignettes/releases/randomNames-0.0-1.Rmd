@@ -1,5 +1,5 @@
 ---
-title: "randomNames 0.0-1"
+title: "randomNames 0.0-1.0"
 ---
 
 ```{r, echo = FALSE}
@@ -7,20 +7,13 @@ knitr::opts_chunk$set(comment = "#>", collapse = TRUE)
 ```
 
 
-We're pleased to announce the first release of the **randomNames** package. The package isn't availabe on [CRAN](https://CRAN.R-project.org/package=randomNames)
-yet so you'll need to install it off of GitHub.
-
-```
-devtools::install_github("centerforassessment/randomNames")
-```
-
-There’s not much to the **randomNames** package: Just a single function `randomNames`.
+This is the initial release of the **randomNames** package. The **randomNames** package was developed to avoid always naming anonymous persons *John Doe* or *Jane Doe*.
+Random names generated from the `randomNames` function are derived from a large data base of personal names with gender and ethnicity identifiers. The names are
+also probabilistically selected based upon their frequency in the original data from which they were derived.
 
 ```r
 library(randomNames)
 print(randomNames(5))
 ```
 
-You can see the documentation for more info on the `randomNames` arguments.
-
-**randomNames** is under active development.
+For complete `randomNames` documentation, see the [documentation](https://CenterForAssessment.github.io/randomNames/reference/randomNames.html)
