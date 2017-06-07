@@ -39,7 +39,7 @@
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     News
-
+     
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
@@ -59,12 +59,14 @@
         <li>
   <a href="https://github.com/centerforassessment/randomNames">
     <span class="fa fa-github"></span>
-
+     
   </a>
 </li>
 <li>
-    <a style="cursor:pointer"
-  onclick="window.open('https://twitter.com/intent/tweet?url=https%3A%2F%2Fcenterforassessment.github.io%2FrandomNames%2Findex.html&amp;via=dbetebenner&amp;text=randomNames%3A%20Function%20for%20Generating%20Random%20Names%20and%20a%20Dataset&amp;hashtags=rstats%2C%20randomNames','my.win',' scrollbars=0,menubar=0,height=300,width=600,resizable=0,toolbar=0,location=0,status=0')"><span class="fa fa-twitter"></span></a>
+   <a style="cursor:pointer" onclick="window.open('https://twitter.com/intent/tweet?url=https%3A%2F%2Fcenterforassessment.github.io%2FrandomNames%2Findex.html&amp;via=dbetebenner&amp;text=randomNames%3A%20Function%20for%20Generating%20Random%20Names%20and%20a%20Dataset&amp;hashtags=rstats%2C%20randomNames','','scrollbars=0,menubar=0,height=300,width=600,resizable=0,toolbar=0,location=0,status=0')">
+    <span class="fa fa-twitter"></span>
+     
+  </a>
 </li>
       </ul>
 </div>
@@ -74,37 +76,40 @@
 </div>
 <!--/.navbar -->
 
-
+      
       </header><div class="row">
   <div class="contents col-md-9">
+    
+<div id="randomnames" class="section level1">
 
 
-<div id="overview" class="section level2">
-<h2 class="hasAnchor">
-<a href="#overview" class="anchor"></a>Overview</h2>
+</div>
+<div id="overview" class="section level1">
+<h1 class="hasAnchor">
+<a href="#overview" class="anchor"></a>Overview</h1>
 <p>The <strong>randomNames</strong> package contains a single function <code>randomNames</code> which creates random gender/ethnicity correct first and/or last names where names are proportionally sampled based upon their frequency in a large scale database.</p>
 </div>
-<div id="installation" class="section level2">
+<div id="installation" class="section level1">
+<h1 class="hasAnchor">
+<a href="#installation" class="anchor"></a>Installation</h1>
+<div id="from-cran" class="section level2">
 <h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
-<div id="from-cran" class="section level3">
-<h3 class="hasAnchor">
 <a href="#from-cran" class="anchor"></a>From <a href="https://CRAN.R-project.org/package=randomNames">CRAN</a>
-</h3>
+</h2>
 <p>To install the latest stable release of <strong>randomNames</strong> from <a href="https://CRAN.R-project.org/package=randomNames">CRAN</a></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">"randomNames"</span>)</code></pre></div>
 </div>
-<div id="from-github" class="section level3">
-<h3 class="hasAnchor">
+<div id="from-github" class="section level2">
+<h2 class="hasAnchor">
 <a href="#from-github" class="anchor"></a>From <a href="https://github.com/CenterForAssessment/randomNames/">Github</a>
-</h3>
+</h2>
 <p>To install the development release of <strong>randomNames</strong> from <a href="https://github.com/CenterForAssessment/randomNames/">GitHub</a>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"CenterForAssessment/randomNames"</span>)</code></pre></div>
 </div>
 </div>
-<div id="usage" class="section level2">
-<h2 class="hasAnchor">
-<a href="#usage" class="anchor"></a>Usage</h2>
+<div id="usage" class="section level1">
+<h1 class="hasAnchor">
+<a href="#usage" class="anchor"></a>Usage</h1>
 <pre><code>&gt; randomNames(5) ## 5 last, first names
 [1] "Mossberg, Cassie"  "Mendiaz, Victoria" "Miner, Cassidy"    "Austin, Brook"     "Babcock, Lloyd"
 
@@ -120,17 +125,17 @@
 &gt; randomNames(5, gender=1, ethnicity=6, which.names="first") ## 5 Middle Eastern, female first names
 [1] "Jawhara"  "Raaniya"  "Ghaada"   "Ghazaala" "Raabia"</code></pre>
 </div>
-<div id="resources" class="section level2">
-<h2 class="hasAnchor">
-<a href="#resources" class="anchor"></a>Resources</h2>
+<div id="resources" class="section level1">
+<h1 class="hasAnchor">
+<a href="#resources" class="anchor"></a>Resources</h1>
 <ul>
 <li><a href="https://CenterForAssessment.github.io/randomNames">randomNames GitHub Pages</a></li>
 <li><a href="https://CRAN.R-project.org/package=randomNames">CRAN Repo</a></li>
 </ul>
 </div>
-<div id="contributors" class="section level2">
-<h2 class="hasAnchor">
-<a href="#contributors" class="anchor"></a>Contributors</h2>
+<div id="contributors" class="section level1">
+<h1 class="hasAnchor">
+<a href="#contributors" class="anchor"></a>Contributors</h1>
 <p>The <strong>randomNames</strong> Package is crafted with ❤️ by:</p>
 <ul>
 <li><a href="https://github.com/dbetebenner">Damian Betebenner</a></li>
@@ -170,7 +175,7 @@
 
 
       <footer><div class="packagePages">
-  <p>randomNames is a <a href="https://centerforassessment.github.io">Center for Assessment</a> thing.</p>
+  <p><b>randomNames</b> is a <a href="https://centerforassessment.github.io">Center for Assessment</a> thing.</p>
 </div>
 
 <div class="author">

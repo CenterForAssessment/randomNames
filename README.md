@@ -1,3 +1,7 @@
+randomNames
+===========
+
+
 [![Build Status](https://travis-ci.org/CenterForAssessment/randomNames.svg?branch=master)](https://travis-ci.org/CenterForAssessment/randomNames)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/centerforassessment/Literasee?branch=master&svg=true)](https://ci.appveyor.com/project/centerforassessment/Literasee)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/randomNames)](http://cran.r-project.org/package=randomNames)
@@ -6,14 +10,15 @@
 [![License](http://img.shields.io/badge/license-GPL%203-brightgreen.svg?style=flat)](https://github.com/CenterForAssessment/randomNames/blob/master/LICENSE.md)
 [![https://gitter.im/CenterForAssessment/randomNames](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/CenterForAssessment/randomNames?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-## Overview
+
+# Overview
 
 The **randomNames** package contains a single function `randomNames` which creates random gender/ethnicity correct first and/or last names where names are proportionally sampled based upon their frequency in a large scale database.
 
 
-## Installation
+# Installation
 
-### From [CRAN](https://CRAN.R-project.org/package=randomNames)
+## From [CRAN](https://CRAN.R-project.org/package=randomNames)
 
 To install the latest stable release of **randomNames** from [CRAN](https://CRAN.R-project.org/package=randomNames)
 
@@ -21,7 +26,7 @@ To install the latest stable release of **randomNames** from [CRAN](https://CRAN
 install.packages("randomNames")
 ```
 
-### From [Github](https://github.com/CenterForAssessment/randomNames/)
+## From [Github](https://github.com/CenterForAssessment/randomNames/)
 
 To install the development release of **randomNames** from [GitHub](https://github.com/CenterForAssessment/randomNames/):
 
@@ -29,7 +34,7 @@ To install the development release of **randomNames** from [GitHub](https://gith
 devtools::install_github("CenterForAssessment/randomNames")
 ```
 
-## Usage
+# Usage
 
 ```
 > randomNames(5) ## 5 last, first names
@@ -49,13 +54,13 @@ devtools::install_github("CenterForAssessment/randomNames")
 ```
 
 
-## Resources
+# Resources
 
 * [randomNames GitHub Pages](https://CenterForAssessment.github.io/randomNames)
 * [CRAN Repo](https://CRAN.R-project.org/package=randomNames)
 
 
-## Contributors
+# Contributors
 
 The **randomNames** Package is crafted with :heart: by:
 

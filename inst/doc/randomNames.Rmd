@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 			)
 ```
 
-## Introduction
+# Introduction
 
 The **randomNames** package contains a single function allowing users to generate proportionally correct, gender and ethnicity specific first
 and last names. The package contains an embedded data set of names that is based upon a large scale data set of names from the United States
@@ -26,7 +26,7 @@ and the probability of the name occurring in the data set. Random names are ofte
 but needs to obscure the identity of the person to whom the data belongs.
 
 
-## Use
+# Use
 
 After [installing](https://dbetebenner.github.io/randomNames/index.html#installation) the package from either CRAN
 or GitHub, it's simple to generate random names using the following simple instructions.
@@ -44,7 +44,7 @@ randomNames(5)
 ```
 
 
-### Additional output control
+## Additional output control
 
 The **randomNames** function accepts several arguments including `n`, `gender`, `ethnicity`, `which.names`, `name.order`, and `name.sep`.
 
@@ -61,7 +61,7 @@ randomNames(n,
 
 For complete documentation on values accepted for arguments, see the [function documentation](https://CenterForAssessment.github.io/randomNames/reference/randomNames.html)
 
-### Examples
+## Examples
 
 The first argument, `n`, controls the number of names returned by the **randomNames** function:
 
@@ -114,6 +114,6 @@ randomNames(5, gender=1, ethnicity=6, name.order="first.last", name.sep=" ") ## 
 ```
 
 
-## Contributions & Requests
+# Contributions & Requests
 
 If you have contribution or a feature request for the **randomNames** package, don't hesitate to write or set up an [issue on GitHub](https://github.com/CenterForAssessment/randomNames/issues).
