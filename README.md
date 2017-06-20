@@ -3,7 +3,7 @@ randomNames
 
 
 [![Build Status](https://travis-ci.org/CenterForAssessment/randomNames.svg?branch=master)](https://travis-ci.org/CenterForAssessment/randomNames)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/centerforassessment/Literasee?branch=master&svg=true)](https://ci.appveyor.com/project/centerforassessment/Literasee)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/centerforassessment/randomNames?branch=master&svg=true)](https://ci.appveyor.com/project/centerforassessment/randomNames)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/randomNames)](http://cran.r-project.org/package=randomNames)
 [![Development Version](https://img.shields.io/badge/devel-1.0--0.0-brightgreen.svg)](https://github.com/CenterForAssessment/randomNames)
 [![Rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/grand-total/randomNames)](https://github.com/metacran/cranlogs.app)
