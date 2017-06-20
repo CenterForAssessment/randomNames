@@ -6,8 +6,8 @@ template:
 home:
   strip_header: true
   links:
-    - text: Learn more
-      href: https://centerforassessment.github.io/randomNames
+    - text: Other Center stuff
+      href: https://centerforassessment.github.io/
 
 
 navbar:
