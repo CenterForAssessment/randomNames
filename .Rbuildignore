@@ -3,5 +3,5 @@
 ^_pkgdown\.yml$
 ^README\.md$
 ^LICENSE.md
-^appveyor\.yml$
+^\.appveyor\.yml$
 ^vignettes/releases$
