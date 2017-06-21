@@ -9,7 +9,7 @@ knitr::opts_chunk$set(comment = "#>", collapse = TRUE)
 
 This is 1.0 release of the **randomNames** package. This release is mostly about the creation of vignettes and
 [web-documentation](https://CenterForAssessment.github.io/randomNames) for the package. However, the package now
-also support Middle Eastern/Arab names. See the new [Getting Started Vignette](https://centerforassessment.github.io/randomNames/articles/randomNames.html)
-for more information.
+also support Middle Eastern/Arabic names. See the new 
+[Getting Started Vignette](https://centerforassessment.github.io/randomNames/articles/randomNames.html) for more information.
 
-Feel free to drop me a line with any comments, feature requests, or ideas. And give us a Tweet using the Twitter button in the upper right!
+Feel free to drop me a line with any comments, feature requests, or ideas. And give us a shout-out Tweet using the Twitter button in the upper right!
