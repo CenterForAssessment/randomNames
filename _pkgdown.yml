@@ -15,16 +15,16 @@ navbar:
     type: default
     left:
     - text: Getting Started
-      href: articles/toOrdinal.html
+      href: articles/randomNames.html
     - text: Reference
       href: reference/index.html
     - text: News
       menu:
       - text: "Release notes"
       - text: "Version 1.0-0.0"
-        href: articles/releases/toOrdinal-1.0-0.0.html
+        href: articles/releases/randomNames-1.0-0.0.html
       - text: "Version 0.0-1"
-        href: articles/releases/toOrdinal-0.0-1.html
+        href: articles/releases/randomNames-0.0-1.html
       - text: "------------------"
       - text: "Change log"
         href: news/index.html
