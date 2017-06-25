@@ -32,7 +32,7 @@ navbar:
       - icon: fa-github
         href: https://github.com/centerforassessment/randomNames
       - icon: fa-twitter
-        href: https://twitter.com/intent/tweet?url=https%3A%2F%2Fcenterforassessment.github.io%2FrandomNames%2Findex.html&via=dbetebenner&text=randomNames%3A%20Function%20for%20Generating%20Random%20Names%20and%20a%20Dataset&hashtags=rstats%2C%20randomNames
+        href: https://twitter.com/intent/tweet?url=https%3A%2F%2Fcenterforassessment.github.io%2FrandomNames%2Findex.html&via=dbetebenner&text=randomNames%3A%20R%20package%20to%20generate%20random%20given%20and%20surnames&hashtags=rstats%2C%20randomNames
 
 
 reference:
