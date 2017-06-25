@@ -1,7 +1,7 @@
 \name{randomNames-package}
 \alias{randomNames-package}
 \docType{package}
-\title{Function for Generating Random Names and a Dataset
+\title{Generate Random Given and Surnames
 }
 \description{
 Functions for generating random gender and ethnicity correct first and/or last names where names are proportionally sampled based upon their frequency in

@@ -1,6 +1,11 @@
 # randomNames 1.0-0.0
 
-* Rolling out the first 1.0 release with nice documentation.
+* Shortened and improved the title of the package.
+
+# randomNames 1.0-0.0
+
+* Changed numbering of releases from 3 to 4 digits.
+* Created real vignette and fixed everything up for a nice 1.0-0.0 release.
 
 # randomNames 0.6-0
 
