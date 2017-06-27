@@ -11,12 +11,20 @@ vignette: >
 
 ```{r include = FALSE}
 library(randomNames)
+is_html_output = function() {
+  knitr::opts_knit$get("rmarkdown.pandoc.to")=="html"
+}
 knitr::opts_chunk$set(
     collapse = TRUE,
-    comment = ">",
+    comment = "",
+    prompt=TRUE,
     fig.dpi = 96
 			)
+if (is_html_output()) {
+    options(width=1000)
+}
 ```
+
 
 # Introduction
 
@@ -62,6 +70,7 @@ randomNames(n,
 
 For complete documentation on values accepted for arguments, see the [function documentation](https://CenterForAssessment.github.io/randomNames/reference/randomNames.html)
 
+
 ## Examples
 
 The first argument, `n`, controls the number of names returned by the **randomNames** function:
@@ -78,7 +87,6 @@ randomNames(5, gender=1) ## 5 female last, first names
 
 randomNames(5, gender=c(0,0,1,1,1)) ## 2 male  and 3 female last, first names
 ```
-
 
 The third argument, `ethnicity`, controls the ethnicity of the names returned. The following integer codes/ethnicities are accepted:
 
