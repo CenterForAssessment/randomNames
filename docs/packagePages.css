@@ -1467,11 +1467,11 @@ samp {
   font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace; }
 
 code {
-  padding: 2px 4px;
+  padding: 1px 4px;
   font-size: 90%;
-  color: #444;
-  background-color: #f2f2f2;
-  border-radius: 3px; }
+  color: black;
+  background-color: #f5f5f5;
+  border-radius: 2px; }
 
 kbd {
   padding: 2px 4px;
@@ -1488,9 +1488,9 @@ kbd {
 
 pre {
   display: block;
-  padding: 13px;
-  margin: 0 0 13.5px;
-  font-size: 14px;
+  padding: 10px;
+  margin: 0 5px 13.5px 5px;
+  font-size: 13px;
   line-height: 1.846;
   word-break: break-all;
   word-wrap: break-word;
@@ -1500,11 +1500,11 @@ pre {
   border-radius: 3px; }
   pre code {
     padding: 0;
-    font-size: inherit;
+    font-size: 13px;
     color: inherit;
-    white-space: pre-wrap;
     background-color: transparent;
-    border-radius: 0; }
+    border-radius: 0;
+    overflow-x: auto; }
 
 .pre-scrollable {
   max-height: 340px;
@@ -2396,7 +2396,7 @@ legend {
   line-height: inherit;
   color: #212121;
   border: 0;
-  border-bottom: 1px solid #e5e5e5; }
+  border-bottom: 1px solid #f0f0f0; }
 
 label {
   display: inline-block;
@@ -3208,7 +3208,7 @@ tbody.collapse.in {
     height: 1px;
     margin: 12.5px 0;
     overflow: hidden;
-    background-color: #e5e5e5; }
+    background-color: #f5f5f5; }
   .dropdown-menu > li > a {
     display: block;
     padding: 3px 20px;
@@ -3589,7 +3589,7 @@ tbody.collapse.in {
     height: 1px;
     margin: 12.5px 0;
     overflow: hidden;
-    background-color: #e5e5e5; }
+    background-color: #f5f5f5; }
   .nav > li > a > img {
     max-width: none; }
 

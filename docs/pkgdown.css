@@ -69,16 +69,54 @@ body {
 /* Syntax highlighting ---------------------------------------------------- */
 
 pre {
+  display: block;
+  padding: 10px;
+  margin: 0 5px 13.5px 5px;
+  font-size: 13px;
+  line-height: 1.846;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: #212121;
+  background-color: #fafafa;
+  border: 0.1px solid #f5f5f5;
+  border-radius: 3px; }
+  pre code {
+    padding: 0;
+    font-size: 13px;
+    color: inherit;
+    background-color: transparent;
+    border-radius: 0;
+    overflow-x: auto; }
+
+/*
+pre {
   word-wrap: normal;
   word-break: normal;
   border: none;
 }
 
-pre, code {
-  background-color: #fafafa;
-  color: #000000;
+pre code {
+  background-color: #ftf5f5;
+  color: inherit;
+  padding: 0;
+  font-size: 13px;
+  background-color: transparent;
+  border-radius: 0;
+  overflow-x: auto;
   -webkit-font-smoothing: subpixel-antialiased;
 }
+
+.sourceCode {
+  background-color: #f5f5f5;
+  color: inherit;
+  padding: 0;
+  font-size: 13px;
+  background-color: transparent;
+  border-radius: 0;
+  overflow-x: auto;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+*/
 
 pre img {
   background-color: #fff;
