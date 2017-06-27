@@ -23,7 +23,7 @@ The **randomNames** package contains a single function `randomNames` which creat
 To install the latest stable release of **randomNames** from [CRAN](https://CRAN.R-project.org/package=randomNames)
 
 ```R
-install.packages("randomNames")
+> install.packages("randomNames")
 ```
 
 ## From [Github](https://github.com/CenterForAssessment/randomNames/)
@@ -31,7 +31,7 @@ install.packages("randomNames")
 To install the development release of **randomNames** from [GitHub](https://github.com/CenterForAssessment/randomNames/):
 
 ```R
-devtools::install_github("CenterForAssessment/randomNames")
+> devtools::install_github("CenterForAssessment/randomNames")
 ```
 
 # Usage
