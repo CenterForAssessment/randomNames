@@ -1,6 +1,4 @@
 import(data.table)
-import(knitr)
-import(rmarkdown)
 export(randomNames)
 importFrom(crayon,bold,green,magenta,red,yellow)
 importFrom(stats,runif)
