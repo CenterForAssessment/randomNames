@@ -83,7 +83,7 @@
       <h1>Getting started with randomNames</h1>
                         <h4 class="author">Damian W Betebenner</h4>
             
-            <h4 class="date">2017-06-29</h4>
+            <h4 class="date">2017-07-18</h4>
           </div>
 
     
@@ -100,10 +100,10 @@
 <p>After <a href="https://dbetebenner.github.io/randomNames/index.html#installation">installing</a> the package from either CRAN or GitHub, it’s simple to generate random names using the following simple instructions.</p>
 <p>By default, the <code>randomNames</code> function supplies a single random last and first name separated by a comma:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&gt;</span><span class="st"> </span><span class="kw"><a href="../reference/randomNames.html">randomNames</a></span>()
-[<span class="dv">1</span>] <span class="st">"Rivas, Gloria"</span></code></pre></div>
+[<span class="dv">1</span>] <span class="st">"Kwiatkowski, Addler"</span></code></pre></div>
 <p>To generate more random names, just supply a positive integer to the <code>randomNames</code> function:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&gt;</span><span class="st"> </span><span class="kw"><a href="../reference/randomNames.html">randomNames</a></span>(<span class="dv">5</span>)
-[<span class="dv">1</span>] <span class="st">"el-Tawil, Mahuroos"</span>     <span class="st">"Blaeholder, Christiana"</span> <span class="st">"al-Mansoor, Fat'hi"</span>     <span class="st">"Mondragon, Michelle"</span>    <span class="st">"el-Karam, Hamood"</span>      </code></pre></div>
+[<span class="dv">1</span>] <span class="st">"Gurule, Christopher"</span> <span class="st">"Cisneros, Ryan"</span>      <span class="st">"Alexander, Treandre"</span> <span class="st">"Phu, Xavier"</span>         <span class="st">"Banks, Chante"</span>      </code></pre></div>
 <div id="additional-output-control" class="section level2">
 <h2 class="hasAnchor">
 <a href="#additional-output-control" class="anchor"></a>Additional output control</h2>
@@ -123,13 +123,13 @@
 <a href="#examples" class="anchor"></a>Examples</h2>
 <p>The first argument, <code>n</code>, controls the number of names returned by the <strong>randomNames</strong> function:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&gt;</span><span class="st"> </span><span class="kw"><a href="../reference/randomNames.html">randomNames</a></span>(<span class="dv">5</span>) ## 5 last, first names
-[<span class="dv">1</span>] <span class="st">"Chan, Savannah"</span>        <span class="st">"Gulessserian, Dominic"</span> <span class="st">"al-Shakoor, Mastoor"</span>   <span class="st">"al-Farag, Baheej"</span>      <span class="st">"Dunn-Sparks, Seandre"</span> </code></pre></div>
+[<span class="dv">1</span>] <span class="st">"Davis, Micah"</span>    <span class="st">"Khuu, Woranee"</span>   <span class="st">"Emery, Brooke"</span>   <span class="st">"Obert, Courtney"</span> <span class="st">"Mares, Angie"</span>   </code></pre></div>
 <p>The second argument, <code>gender</code>, controls the gender (0=male, 1=female) of the first names returned. This argument can be a vector up to the same length as the number of names requested.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&gt;</span><span class="st"> </span><span class="kw"><a href="../reference/randomNames.html">randomNames</a></span>(<span class="dv">5</span>, <span class="dt">gender=</span><span class="dv">1</span>) ## 5 female last, first names
-[<span class="dv">1</span>] <span class="st">"Scott, Nikki"</span>  <span class="st">"Kynor, Julie"</span>  <span class="st">"Chu, Gopi"</span>     <span class="st">"Reid, Nia"</span>     <span class="st">"Jones, Ashley"</span>
+[<span class="dv">1</span>] <span class="st">"Franklin, Leann"</span>   <span class="st">"Brink, Jessica"</span>    <span class="st">"Bratcher, Shellie"</span> <span class="st">"Rauscher, Mai"</span>     <span class="st">"Bird, Alexis"</span>     
 <span class="op">&gt;</span><span class="st"> </span>
 <span class="er">&gt;</span><span class="st"> </span><span class="kw"><a href="../reference/randomNames.html">randomNames</a></span>(<span class="dv">5</span>, <span class="dt">gender=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>)) ## 2 male  and 3 female last, first names
-[<span class="dv">1</span>] <span class="st">"Johnson, Justin"</span>     <span class="st">"Sosa, Todd"</span>          <span class="st">"Thornton, Catherine"</span> <span class="st">"San Pedro, Taya"</span>     <span class="st">"Kee, Isabella"</span>      </code></pre></div>
+[<span class="dv">1</span>] <span class="st">"Gilbert, Earl"</span>    <span class="st">"Porter, John"</span>     <span class="st">"Ostdiek, Miranda"</span> <span class="st">"Hausner, Madison"</span> <span class="st">"Kang, Catarina"</span>  </code></pre></div>
 <p>The third argument, <code>ethnicity</code>, controls the ethnicity of the names returned. The following integer codes/ethnicities are accepted:</p>
 <ol style="list-style-type: decimal">
 <li>American Indian or Native Alaskan</li>
@@ -140,16 +140,16 @@
 <li>Middle-Eastern, Arabic</li>
 </ol>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&gt;</span><span class="st"> </span><span class="kw"><a href="../reference/randomNames.html">randomNames</a></span>(<span class="dv">5</span>, <span class="dt">gender=</span><span class="dv">0</span>, <span class="dt">ethnicity=</span><span class="dv">3</span>) ## 5 African American, male last, first names
-[<span class="dv">1</span>] <span class="st">"Vaughn, Tion"</span>       <span class="st">"Davis, Travis"</span>      <span class="st">"Johnson, Dershon"</span>   <span class="st">"Clayburn, Jonathan"</span> <span class="st">"Collins, Talon"</span>    </code></pre></div>
+[<span class="dv">1</span>] <span class="st">"Joyner-Green, Steven"</span>     <span class="st">"Sumbunu, Terrence"</span>        <span class="st">"Warren Dennison, Brandon"</span> <span class="st">"Benjamin, Shedrick"</span>       <span class="st">"Flowers, Sherman"</span>        </code></pre></div>
 <p>The fourth argument, <code>which.names</code> controls which names are returned. The argument accepts the values: <code>both</code> (the default), <code>last</code>, <code>first</code>, or <code>complete.data</code></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&gt;</span><span class="st"> </span><span class="kw"><a href="../reference/randomNames.html">randomNames</a></span>(<span class="dv">5</span>, <span class="dt">gender=</span><span class="dv">1</span>, <span class="dt">ethnicity=</span><span class="dv">6</span>, <span class="dt">which.names=</span><span class="st">"first"</span>) ## 5 Middle Eastern/Arabic, female first names
-[<span class="dv">1</span>] <span class="st">"Nameera"</span>   <span class="st">"Ulyaa"</span>     <span class="st">"Waliyya"</span>   <span class="st">"Mufeeda"</span>   <span class="st">"Ibtisaama"</span></code></pre></div>
+[<span class="dv">1</span>] <span class="st">"Maajida"</span>  <span class="st">"Wajeeha"</span>  <span class="st">"Hishma"</span>   <span class="st">"Sahar"</span>    <span class="st">"Shafee'a"</span></code></pre></div>
 <p>The fifth argument, <code>name.order</code>, controls the order in which the names are returned. The argument is only relevant if <code>which.names=both</code>. The argument accepts the values: <code>last.first</code> (the default) and <code>first.last</code>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&gt;</span><span class="st"> </span><span class="kw"><a href="../reference/randomNames.html">randomNames</a></span>(<span class="dv">5</span>, <span class="dt">gender=</span><span class="dv">1</span>, <span class="dt">ethnicity=</span><span class="dv">6</span>, <span class="dt">name.order=</span><span class="st">"first.last"</span>) ## 5 first last names
-[<span class="dv">1</span>] <span class="st">"Suhaa, el-Hatem"</span>       <span class="st">"Razeena, el-Naderi"</span>    <span class="st">"Haleema, al-Saad"</span>      <span class="st">"Jadeeda, al-Nasrallah"</span> <span class="st">"Nawaar, el-Hamady"</span>    </code></pre></div>
+[<span class="dv">1</span>] <span class="st">"Tahiyya, al-Bina"</span>   <span class="st">"Shareefa, el-Sadiq"</span> <span class="st">"Nazeeha, el-Hatem"</span>  <span class="st">"Sumbula, el-Meskin"</span> <span class="st">"Tharwa, al-Aslam"</span>  </code></pre></div>
 <p>The sixth argument, <code>name.sep</code>, is a character string that controls the separator used when <code>both</code> names are returned. The default separator is <code>,</code>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">&gt;</span><span class="st"> </span><span class="kw"><a href="../reference/randomNames.html">randomNames</a></span>(<span class="dv">5</span>, <span class="dt">gender=</span><span class="dv">1</span>, <span class="dt">ethnicity=</span><span class="dv">6</span>, <span class="dt">name.order=</span><span class="st">"first.last"</span>, <span class="dt">name.sep=</span><span class="st">" "</span>) ## 5 first last names separated by a space
-[<span class="dv">1</span>] <span class="st">"Najma al-Kalil"</span>    <span class="st">"Nameera el-Naderi"</span> <span class="st">"Hanoona el-Rahimi"</span> <span class="st">"Rahma al-Ramadan"</span>  <span class="st">"Israa al-Jaffer"</span>  </code></pre></div>
+[<span class="dv">1</span>] <span class="st">"Shaafia al-Salek"</span>    <span class="st">"Haajara el-Taha"</span>     <span class="st">"Shaahida al-Mahdavi"</span> <span class="st">"Waseema al-Hakim"</span>    <span class="st">"Shajee'a al-Pashia"</span> </code></pre></div>
 </div>
 </div>
 <div id="contributions-requests" class="section level1">
