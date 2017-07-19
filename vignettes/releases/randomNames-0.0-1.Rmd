@@ -3,7 +3,13 @@ title: "randomNames 0.0-1"
 ---
 
 ```{r, echo = FALSE}
-knitr::opts_chunk$set(comment = "#>", collapse = TRUE)
+is_html_output = function() {
+  knitr::opts_knit$get("rmarkdown.pandoc.to")=="html"
+}
+knitr::opts_chunk$set(collapse = TRUE, comment = "", prompt=TRUE, fig.dpi = 96)
+if (is_html_output()) {
+    options(width=1000)
+}
 ```
 
 
@@ -11,9 +17,9 @@ This is the initial release of the **randomNames** package. The **randomNames** 
 Random names generated from the `randomNames` function are derived from a large data base of personal names with gender and ethnicity identifiers. The names are
 also probabilistically selected based upon their frequency in the original data from which they were derived.
 
-```r
+```{r}
 library(randomNames)
-print(randomNames(5))
+randomNames(5)
 ```
 
 For complete `randomNames` documentation, see the [documentation](https://CenterForAssessment.github.io/randomNames/reference/randomNames.html)
