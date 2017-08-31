@@ -5825,7 +5825,7 @@ button.close {
   padding: 10px 0;
   transition: all 0.35s ease; }
   .navbar-brand {
-    font-family: "Josefin Sans";
+    font-family: "Josefin Sans", sans-serif;
     font-weight: 400;
     padding: 0 0 0 60px;
     height: 48px;
@@ -5835,7 +5835,7 @@ button.close {
     background-repeat: no-repeat;
     background-position: 15px center; }
   .navbar-label {
-    font-family: "Josefin Sans", monospace;
+    font-family: "Josefin Sans", sans-serif;
     font-weight: 400;
     font-size: 38px;
     padding: 0 0 0 0px;
