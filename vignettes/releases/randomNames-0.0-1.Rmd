@@ -1,5 +1,6 @@
 ---
 title: "randomNames 0.0-1"
+date: "June 5th, 2011"
 ---
 
 ```{r, echo = FALSE}

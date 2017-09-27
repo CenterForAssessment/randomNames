@@ -1,7 +1,7 @@
 ---
 title: "Getting started with randomNames"
 author: "Damian W Betebenner"
-date: "`r Sys.Date()`"
+date: "`r paste0(format(Sys.Date(), format='%B '), toOrdinal::toOrdinal(as.numeric(format(Sys.Date(), format='%d'))), format(Sys.Date(), format=', %Y'))`"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Getting started with randomNames}
@@ -24,7 +24,6 @@ if (is_html_output()) {
     options(width=1000)
 }
 ```
-
 
 # Introduction
 
@@ -116,7 +115,7 @@ The argument accepts the values: `last.first` (the default) and `first.last`.
 randomNames(5, gender=1, ethnicity=6, name.order="first.last") ## 5 first last names
 ```
 
-The sixth argument, `name.sep`, is a character string that controls the separator used when `both` names are returned. The default separator is `, `.
+The sixth argument, `name.sep`, is a character string that controls the separator used when _both_ names are returned. The default separator is `, `.
 
 ```{r}
 randomNames(5, gender=1, ethnicity=6, name.order="first.last", name.sep=" ") ## 5 first last names separated by a space
