@@ -3680,7 +3680,7 @@ tbody.collapse.in {
 .navbar {
   position: relative;
   min-height: 110px;
-  margin-bottom: 27px;
+  margin-bottom: 20px;
   border: 1px solid transparent; }
   .navbar:before, .navbar:after {
     content: " ";
@@ -5821,7 +5821,7 @@ button.close {
   border-bottom: 1px solid #444;
   -webkit-box-shadow: 0 3px 12px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0 3px 12px 0px rgba(0, 0, 0, 0.1);
-  min-height: 55px;
+  min-height: 50px;
   padding: 10px 0;
   transition: all 0.35s ease; }
   .navbar-brand {
