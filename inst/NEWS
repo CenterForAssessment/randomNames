@@ -1,3 +1,7 @@
+# randomNames 1.3-0.0
+
+* Fixed issue with NAs embedded in ethnicity and gender returning wrong data later.
+
 # randomNames 1.0-0.0
 
 * Shortened and improved the title of the package.

@@ -40,14 +40,14 @@ function(
 	gender <- rep(gender, length=tmp.length)
 	ethnicity <- rep(ethnicity, length=tmp.length)
 
-	if (!all(gender %in% c(0,1))) {
+	if (!all(gender %in% c(NA,0,1))) {
 		tmp <- rep(NA, length(gender))
 		tmp[grep("Male|M", gender, ignore.case=TRUE)] <- 0
 		tmp[grep("Female|F", gender, ignore.case=TRUE)] <- 1
 		gender <- tmp
 	}
 
-	if (!all(ethnicity %in% 1:6)) {
+	if (!all(ethnicity %in% c(NA,1:6))) {
 		tmp <- rep(NA, length(ethnicity))
 		tmp[grep("Indian|Alaska|Native American", ethnicity, ignore.case=TRUE)] <- 1
 		tmp[grep("Hawaii|Pacific|Asian", ethnicity, ignore.case=TRUE)] <- 2
