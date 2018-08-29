@@ -3189,7 +3189,7 @@ tbody.collapse.in {
   display: none;
   float: left;
   min-width: 160px;
-  padding: 5px 0;
+  padding: 10px 0;
   margin: 2px 0 0;
   list-style: none;
   font-size: 15px;
@@ -3966,10 +3966,13 @@ tbody.collapse.in {
   .navbar-default .navbar-nav > li > a {
     color: #444;
     padding-top: 5px;
-    margin-top: 5px; }
-    .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-      color: #222;
-      background-color: transparent; }
+    margin-top: 5px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-top: 1px solid transparent; }
+  .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #222;
+    background-color: transparent; }
   .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     color: #212121;
     background-color: #fcfcfc; }
@@ -3992,7 +3995,7 @@ tbody.collapse.in {
     border-right: 1px solid #bdd;
     border-top: 1px solid #bdd;
     border-radius: 5px 5px 0px 0px;
-    padding-bottom: 6px;
+    padding-bottom: 0px;
     padding-top: 5px;
     margin-top: 5px; }
   @media (max-width: 767px) {
@@ -5833,7 +5836,8 @@ button.close {
     background-image: url(./img/logo.png);
     background-size: 38px auto;
     background-repeat: no-repeat;
-    background-position: 15px center; }
+    background-position: 15px center;
+    transition: all 0.35s; }
   .navbar-label {
     font-family: "Josefin Sans", sans-serif;
     font-weight: 400;
@@ -5996,9 +6000,7 @@ button {
   letter-spacing: .1px; }
 
 a {
-  -webkit-transition: all 0.25s;
-  -o-transition: all 0.25s;
-  transition: all 0.25s; }
+  -o-transition: all 0.25s; }
 
 .table-hover > tbody > tr,
 .table-hover > tbody > tr > th,
