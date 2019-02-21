@@ -1,6 +1,9 @@
 language: r
 warnings_are_errors: true
 
+r_github_packages:
+     - centerforassessment/toOrdinal
+
 notifications:
   webhooks:
     urls:
