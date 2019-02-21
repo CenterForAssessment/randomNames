@@ -79,14 +79,17 @@ pre {
   color: #212121;
   background-color: #fafafa;
   border: 0.1px solid #f5f5f5;
-  border-radius: 3px; }
-  pre code {
+  border-radius: 3px;
+}
+
+pre code {
     padding: 0;
     font-size: 13px;
     color: inherit;
     background-color: transparent;
     border-radius: 0;
-    overflow-x: auto; }
+    overflow-x: auto;
+}
 
 /*
 pre {
@@ -118,13 +121,21 @@ pre code {
 }
 */
 
-pre img {
+pre .img {
+  margin: 5px 0;
+}
+
+pre .img img {
   background-color: #fff;
   display: block;
 }
 
 code a, pre a {
   color: #375f84;
+}
+
+a.sourceLine:hover {
+  text-decoration: none;
 }
 
 .fl      {color: #1514b5;}
@@ -160,10 +171,12 @@ code a, pre a {
 .navbar-brand.shrink {
     padding: 0 0 0 54px;
     background-size: 32px auto;
+    transition-duration: 0.25s;
 }
 
 .navbar-label.shrink {
     font-size: 32px;
+    transition-duration: 0.25s;
 }
 
 /* Reference index & topics ----------------------------------------------- */
@@ -306,4 +319,21 @@ a.anchor {
 .fa-twitter {
   font-size: 28px;
   color: #444;
+}
+
+/* Clipboard --------------------------*/
+
+.hasCopyButton {
+  position: relative;
+}
+
+.btn-copy-ex {
+  position: absolute;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+}
+
+.hasCopyButton:hover button.btn-copy-ex {
+  visibility: visible;
 }

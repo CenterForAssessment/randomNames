@@ -1,10 +1,10 @@
 Package: randomNames
-Version: 1.3-0.0
-Date: 2018-8-28
+Version: 1.4-0.0
+Date: 2018-8-29
 Title: Generate Random Given and Surnames
 Depends: R (>= 3.3)
 Suggests: knitr, rmarkdown
-Imports: crayon, data.table
+Imports: crayon, data.table, toOrdinal
 Authors@R: c(person(given=c("Damian", "W."), family="Betebenner", email="dbetebenner@nciea.org", role=c("aut", "cre")))
 Maintainer: Damian W. Betebenner <dbetebenner@nciea.org>
 Description: Function for generating random gender and ethnicity correct first and/or last names. Names are chosen proportionally based upon their probability of appearing in a large scale data base of real names.
