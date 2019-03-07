@@ -1,4 +1,4 @@
-# randomNames 1.3-0.0
+# randomNames 1.4-0.0
 
 * Fixed issue with NAs embedded in ethnicity and gender returning wrong data later.
 
