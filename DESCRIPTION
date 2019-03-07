@@ -1,6 +1,6 @@
 Package: randomNames
 Version: 1.4-0.0
-Date: 2019-3-10
+Date: 2019-3-7
 Title: Generate Random Given and Surnames
 Depends: R (>= 3.3)
 Suggests: knitr, rmarkdown
