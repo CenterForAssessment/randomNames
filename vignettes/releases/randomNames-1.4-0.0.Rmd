@@ -1,0 +1,20 @@
+---
+title: "randomNames 1.4-0.0"
+date: "March 10th, 2019"
+---
+
+```{r, echo = FALSE}
+is_html_output = function() {
+  knitr::opts_knit$get("rmarkdown.pandoc.to")=="html"
+}
+knitr::opts_chunk$set(collapse = TRUE, comment = "", prompt=TRUE, fig.dpi = 96)
+if (is_html_output()) {
+    options(width=1000)
+}
+```
+
+
+This is 1.4 release of the **randomNames** package. This release fixes some bugs found by users (thanks!) and updates the 
+[web-documentation](https://CenterForAssessment.github.io/randomNames)website associated with the package.
+
+Feel free to drop me a line with any comments, feature requests, or ideas. And give us a shout-out Tweet using the Twitter button in the upper right!
