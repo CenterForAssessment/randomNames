@@ -313,12 +313,28 @@ a.anchor {
 
 .fa-github {
   font-size: 28px;
-  color: #444;
+  color: #7c7c7c;
+  -webkit-text-stroke-width: 0px;
+  -webkit-text-stroke-color: black;
+  transition: all 0.35s ease-in-out;
+}
+
+.fa-github:hover {
+  color: black;
+  transition: all 0.35s ease-in-out;
 }
 
 .fa-twitter {
   font-size: 28px;
-  color: #444;
+  color: #7c7c7c;
+  transition: all 0.35s ease-in-out;
+}
+
+.fa-twitter:hover {
+  color: #00ACED;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+  transition: all 0.35s ease-in-out;
 }
 
 /* Clipboard --------------------------*/

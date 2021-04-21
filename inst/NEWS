@@ -1,3 +1,7 @@
+# randomNames 1.5-0.0
+
+* Fixed names with embedded spaces as the first character.
+
 # randomNames 1.4-0.0
 
 * Fixed issue with NAs embedded in ethnicity and gender returning wrong data later.
