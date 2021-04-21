@@ -1,0 +1,20 @@
+---
+title: "randomNames 1.5-0.0"
+date: "April 21st, 2021"
+---
+
+```{r, echo = FALSE}
+is_html_output = function() {
+  knitr::opts_knit$get("rmarkdown.pandoc.to")=="html"
+}
+knitr::opts_chunk$set(collapse = TRUE, comment = "", prompt=TRUE, fig.dpi = 96)
+if (is_html_output()) {
+    options(width=1000)
+}
+```
+
+
+This is 1.5 release of the **randomNames** package. This release fixes some white space that appeared at the front of a few of the first names found by users (thanks!). It 
+also updates the [web-documentation](https://CenterForAssessment.github.io/randomNames)website associated with the package.
+
+Feel free to drop me a line with any comments, feature requests, or ideas. And give us a shout-out Tweet using the Twitter button in the upper right!

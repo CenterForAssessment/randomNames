@@ -21,6 +21,8 @@ navbar:
     - text: News
       menu:
       - text: "Release notes"
+      - text: "randomNames 1.5-0.0"
+        href: articles/releases/randomNames-1.5-0.0.html
       - text: "randomNames 1.4-0.0"
         href: articles/releases/randomNames-1.4-0.0.html
       - text: "randomNames 1.0-0.0"
@@ -31,10 +33,10 @@ navbar:
       - text: "Change log"
         href: news/index.html
     right:
-      - icon: fa-github
+      - icon: fab fa-github
         href: https://github.com/centerforassessment/randomNames
-      - icon: fa-twitter
-        href: https://twitter.com/intent/tweet?url=https%3A%2F%2Fcenterforassessment.github.io%2FrandomNames%2Findex.html&via=dbetebenner&text=randomNames%3A%20R%20package%20to%20generate%20random%20given%20and%20surnames&hashtags=rstats%2C%20randomNames
+      - icon: fab fa-twitter
+        href: https://twitter.com/intent/tweet?url=https%3A%2F%2Fcenterforassessment.github.io%2FrandomNames%2Findex.html&via=dbetebenner&text=randomNames%3A%20R%20package%20to%20generate%20random%20given%20and%20surnames&hashtags=rstats%2CrandomNames
 
 
 reference:
