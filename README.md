@@ -2,7 +2,7 @@ randomNames
 ===========
 
 
-[![Build Status](https://travis-ci.org/CenterForAssessment/randomNames.svg?branch=master)](https://travis-ci.org/CenterForAssessment/randomNames)
+[![R-CMD-check](https://github.com/CenterForAssessment/randomNames/workflows/R-CMD-check/badge.svg)](https://github.com/CenterForAssessment/randomNames/actions)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/centerforassessment/randomNames?branch=master&svg=true)](https://ci.appveyor.com/project/centerforassessment/randomNames)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/randomNames)](http://cran.r-project.org/package=randomNames)
 [![Development Version](https://img.shields.io/badge/devel-1.5--0.0-brightgreen.svg)](https://github.com/CenterForAssessment/randomNames)
