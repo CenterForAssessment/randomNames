@@ -34,6 +34,12 @@ body {
   .navbar-fixed-top {
     position: absolute;
   }
+  .navbar-brand {
+    background-size: 30px auto;
+  }
+  .navbar-label {
+     font-size: 2.0rem;
+  }
 }
 
 .navbar-toggle {
@@ -218,7 +224,7 @@ footer .author {
 
 .row a {
   padding: 0;
-  color: #778;
+  color: #3480c1;
   background-color: transparent;
 }
 
@@ -230,13 +236,13 @@ footer .author {
 
 .packagePages a {
   padding: 0;
-  color: #778;
+  color: #3480c1;
   background-color: transparent;
 }
 
 .author a {
   padding: 0;
-  color: #778;
+  color: #3480c1;
   background-color: transparent;
 }
 
@@ -254,14 +260,11 @@ footer .author {
 
 /* ---------------------- hover anchor tags */
 
-.hasAnchor {
-  margin-left: -30px;
-}
-
 a.anchor {
   display:inline-block;
   width: 30px;
   height: 30px;
+  margin-left: -30px;
   visibility: hidden;
   background-image: url(./img/link.svg);
   background-repeat: no-repeat;
@@ -301,7 +304,7 @@ a.anchor {
 
 #sidebar a {
   padding: 0;
-  color: #778;
+  color: #3480c1;
   background-color: transparent;
 }
 
