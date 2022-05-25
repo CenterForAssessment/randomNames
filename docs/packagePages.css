@@ -5835,7 +5835,6 @@ button.close {
   -webkit-box-shadow: 0 3px 12px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0 3px 12px 0px rgba(0, 0, 0, 0.1);
   min-height: 50px;
-  padding: 10px 0;
   transition: all 0.35s ease; }
 
 .navbar-brand {
