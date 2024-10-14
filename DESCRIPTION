@@ -1,15 +1,16 @@
 Package: randomNames
-Version: 1.5-0.0
-Date: 2021-4-21
+Version: 1.6-0.0
+Date: 2024-5-2
 Title: Generate Random Given and Surnames
 Depends: R (>= 4.0)
 Suggests: knitr, rmarkdown
 Imports: crayon, data.table (>= 1.14.0), toOrdinal (>= 1.1)
-Authors@R: c(person(given=c("Damian", "W."), family="Betebenner", email="dbetebenner@nciea.org", role=c("aut", "cre")))
+Authors@R: c(person(given=c("Damian", "W."), family="Betebenner", email="dbetebenner@nciea.org", role=c("aut", "cre"), comment=c(ORCID = "0000-0003-0476-5599")),
+                 person(given="Lambert", family="Joshua", role="ctb"))
 Maintainer: Damian W. Betebenner <dbetebenner@nciea.org>
 Description: Function for generating random gender and ethnicity correct first and/or last names. Names are chosen proportionally based upon their probability of appearing in a large scale data base of real names.
-URL: https://CenterForAssessment.github.io/randomNames, https://github.com/CenterForAssessment/randomNames, https://cran.r-project.org/package=randomNames
-BugReports: https://github.com/CenterForAssessment/randomNames/issues
+URL: https://centerforassessment.github.io/randomNames/, https://github.com/CenterForAssessment/randomNames/, https://cran.r-project.org/package=randomNames
+BugReports: https://github.com/CenterForAssessment/randomNames/issues/
 VignetteBuilder: knitr
 LazyLoad: Yes
 LazyData: Yes

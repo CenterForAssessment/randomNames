@@ -1,3 +1,7 @@
+# randomNames 1.6-0.0
+
+* Added in Joshua Lambert's improvements.
+
 # randomNames 1.5-0.0
 
 * Fixed names with embedded spaces as the first character.
