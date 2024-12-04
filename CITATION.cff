@@ -5,6 +5,6 @@ authors:
   given-names: "Betebenner"
   orcid: "https://orcid.org/0000-0003-0476-5599"
 title: "randomNames: Generate Random Given and Surnames"
-version: 1.6-0.0
-date-released: 2024-5-2
+version: 1.6-1.0
+date-released: 2024-12-3
 url: "https://centerforassessment.github.io/randomNames/"
