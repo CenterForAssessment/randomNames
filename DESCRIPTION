@@ -4,7 +4,7 @@ Date: 2024-12-3
 Title: Generate Random Given and Surnames
 Depends: R (>= 4.0)
 Suggests: knitr, rmarkdown
-Imports: crayon, data.table (>= 1.14.0), toOrdinal (>= 1.1)
+Imports: crayon, data.table (>= 1.14.0), pkgsearch, toOrdinal (>= 1.1)
 Authors@R: c(person(given=c("Damian", "W."), family="Betebenner", email="dbetebenner@nciea.org", role=c("aut", "cre"), comment=c(ORCID = "0000-0003-0476-5599")),
                  person(given="Lambert", family="Joshua", role="ctb"))
 Maintainer: Damian W. Betebenner <dbetebenner@nciea.org>
