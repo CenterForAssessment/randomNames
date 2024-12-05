@@ -1,6 +1,6 @@
 import(data.table)
 export(randomNames)
-importFrom(crayon,bold,green,magenta,red,yellow)
+importFrom(crayon,bold,cyan,green,magenta,red,yellow)
 importFrom(toOrdinal,toOrdinalDate)
 importFrom(stats,runif)
 importFrom(utils,packageVersion)
