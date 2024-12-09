@@ -11,31 +11,31 @@ function(libname, pkgname) {
                 lines <- readLines(url, warn = FALSE)
                 version_line <- grep("^Version:", lines, value = TRUE)
                 if (length(version_line) > 0) {
-                    return(strsplit(version_line, ": ")[[1]][2])
+                    return(cyan("v", strsplit(version_line, ": ")[[1]][2], sep=""))
                 } else {
-                    return("Unavailable")
+                    return(red("Not Available"))
                 }
             }, error = function(e) {
-                return("Unavailable")
+                return(red("Not Available"))
             }, warning = function(w) {
-                return("Unavailable")
+                return(red("Not Available"))
             })
         }
 
         # Extract version information
         installed.version <- utils::packageDescription("randomNames")[['Version']]
         cran.version <- tryCatch(
-            pkgsearch::cran_package("randomNames")[['Version']],
-            error = function(e) "Unavailable",
-            warning = function(w) "Unavailable")
+            green("v", pkgsearch::cran_package("randomNames")[['Version']], sep=""),
+            error = function(e) red("Not Available"),
+            warning = function(w) red("Not Available"))
         dev.version <- get_dev_version("randomNames")
 
         # Define a friendly startup message
 		message_text <- paste0(
 		    magenta(bold("\uD83C\uDF89 randomNames v", installed.version, sep="")), " - ", toOrdinal::toOrdinalDate("2024-12-4"), "\n",
 			strrep("\u2501", 40), "\n",
-    	    bold("\U1F4E6 CRAN: "), green("v", cran.version, sep=""), "\n",
-    	    bold("\U1F527 Dev: "), cyan("v", dev.version, sep=""), "\n",
+    	    bold("\U1F4E6 CRAN: "), cran.version, "\n",
+    	    bold("\U1F527 Dev: "), dev.version, "\n",
 			strrep("\u2501", 40), "\n",
 		    "\U1F4A1 Tip: ", magenta(bold("> help(package=\"randomNames\")")), "\n",
 		    "\U1F310 Docs: ", magenta(bold("https://centerforassessment.github.io/randomNames")), "\n",
