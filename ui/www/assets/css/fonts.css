@@ -1,0 +1,10 @@
+/* Self-hosted OFL fonts. The design system forbids font CDNs. Paths are relative to this file. */
+@font-face { font-family: "Josefin Sans"; src: url("../fonts/JosefinSans-300.woff2") format("woff2"); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Josefin Sans"; src: url("../fonts/JosefinSans-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Josefin Sans"; src: url("../fonts/JosefinSans-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Josefin Sans"; src: url("../fonts/JosefinSans-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Josefin Sans"; src: url("../fonts/JosefinSans-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Noto Sans"; src: url("../fonts/NotoSans-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Noto Sans"; src: url("../fonts/NotoSans-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Noto Sans Mono"; src: url("../fonts/NotoSansMono-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Noto Sans Math"; src: url("../fonts/NotoSansMath-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }

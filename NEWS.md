@@ -1,3 +1,21 @@
+# randomNames 1.7-0.0
+
+## Bug fixes
+
+* Valid numeric gender and ethnicity codes are no longer lost when they are mixed with text or with an invalid value in the same vector. `ethnicity = c(1, 7, 3)` used to draw all three at random; now only `7` is.
+* The documentation matches the code: `return.complete.data` (not `which.names = "complete.data"`) returns the `data.table`, ethnicity code 6 is documented for `randomNamesData`, and the duplicated description is gone.
+
+## Changes
+
+* An invalid `n` (zero, negative, fractional, missing, non-numeric or longer than one) is now an error. It printed a note and returned `NULL`.
+* An unknown `which.names` or `name.order` is now an error. It silently returned `NULL`.
+* A gender or ethnicity value that matches nothing is still drawn at random, now with a warning.
+* Seeded output is unchanged: the same `set.seed()` gives the same names as 1.6-0.0. Tests pin this. An unspecified ethnicity is drawn uniformly from all six categories, as documented.
+* The startup banner appears only in interactive sessions, waits at most two seconds for each web request and can be switched off with `options(randomNames.startup_message = FALSE)` or `RANDOMNAMES_QUIET=true`. It no longer needs **pkgsearch**, and **cli** replaces **crayon**.
+* Documentation is generated with roxygen2, and the package now has a testthat 3rd edition test suite.
+* A new website built with Quarto at <https://centerforassessment.github.io/randomNames/>.
+* Requires R 4.1 or later.
+
 # randomNames 1.6-0.0
 
 * Added in Joshua Lambert's improvements.

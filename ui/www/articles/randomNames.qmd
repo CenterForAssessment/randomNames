@@ -1,13 +1,9 @@
 ---
 title: "Getting started with randomNames"
 author: "Damian W Betebenner"
-date: "`r paste0(format(Sys.Date(), format='%B '), toOrdinal::toOrdinal(as.numeric(format(Sys.Date(), format='%d'))), format(Sys.Date(), format=', %Y'))`"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Getting started with randomNames}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\usepackage[utf8]{inputenc}
+toc: true
 ---
+
 
 ```{r include = FALSE}
 library(randomNames)
@@ -36,7 +32,7 @@ but needs to obscure the identity of the person to whom the data belongs.
 
 # Use
 
-After [installing](https://dbetebenner.github.io/randomNames/index.html#installation) the package from either CRAN
+After [installing](https://centerforassessment.github.io/randomNames/#installation) the package from either CRAN
 or GitHub, it's simple to generate random names using the following simple instructions.
 
 By default, the `randomNames` function supplies a single random last and first name separated by a comma:
@@ -101,7 +97,7 @@ randomNames(5, gender=0, ethnicity=3) ## 5 African American, male last, first na
 ```
 
 
-The fourth argument, `which.names` controls which names are returned. The argument accepts the values: `both` (the default), `last`, `first`, or `complete.data`
+The fourth argument, `which.names` controls which names are returned. The argument accepts the values: `both` (the default), `last` or `first`.
 
 ```{r}
 randomNames(5, gender=1, ethnicity=6, which.names="first") ## 5 Middle Eastern/Arabic, female first names
@@ -120,6 +116,45 @@ The sixth argument, `name.sep`, is a character string that controls the separato
 ```{r}
 randomNames(5, gender=1, ethnicity=6, name.order="first.last", name.sep=" ") ## 5 first last names separated by a space
 ```
+
+
+Text works as well as codes. Matching ignores case, and a value that matches nothing is drawn at random, with a warning:
+
+```{r}
+randomNames(4, gender=c("Female", "male"), ethnicity=c("Hispanic", "White", "Asian", "Black"))
+```
+
+## Complete data
+
+Set `return.complete.data=TRUE` to get a `data.table` with the gender and ethnicity codes that were used next to the names:
+
+```{r}
+randomNames(4, gender=1, ethnicity=c(3, 4), return.complete.data=TRUE)
+```
+
+## Reproducible names
+
+Names are random, so call `set.seed()` first when you need the same names again:
+
+```{r}
+set.seed(42)
+randomNames(3)
+set.seed(42)
+randomNames(3)
+```
+
+## Invalid input
+
+An invalid `n`, `which.names` or `name.order` stops with an error rather than returning nothing:
+
+```{r, error=TRUE}
+randomNames(0)
+randomNames(3, which.names="middle")
+```
+
+## The startup message
+
+In an interactive session, attaching the package prints a banner that compares the installed version with CRAN and GitHub. It waits at most two seconds for each request. Turn it off with `options(randomNames.startup_message = FALSE)` or by setting the environment variable `RANDOMNAMES_QUIET=true`.
 
 
 # Contributions & Requests

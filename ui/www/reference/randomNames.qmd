@@ -1,0 +1,121 @@
+---
+title: "randomNames()"
+subtitle: "Generate random first and last names"
+toc: true
+---
+
+## Usage
+
+``` R
+randomNames(
+  n,
+  gender,
+  ethnicity,
+  which.names = "both",
+  name.order = "last.first",
+  name.sep = ", ",
+  sample.with.replacement = TRUE,
+  return.complete.data = FALSE
+)
+```
+
+## Arguments
+
+`n`{#n}
+
+:   Optional. A single positive whole number: how many names to produce. Defaults to 1. Most useful when no gender or ethnicity is supplied.
+
+`gender`{#gender}
+
+:   Optional. A vector of genders, either codes (`0` male, `1` female) or text as described in Details.
+
+`ethnicity`{#ethnicity}
+
+:   Optional. A vector of ethnicities, either codes or text as described in Details. The codes are:
+
+    1
+
+    :   American Indian or Native Alaskan
+
+    2
+
+    :   Asian or Pacific Islander
+
+    3
+
+    :   Black (not Hispanic)
+
+    4
+
+    :   Hispanic
+
+    5
+
+    :   White (not Hispanic)
+
+    6
+
+    :   Middle-Eastern, Arabic
+
+`which.names`{#which.names}
+
+:   One of `"both"` (the default), `"first"` or `"last"`.
+
+`name.order`{#name.order}
+
+:   When `which.names` is `"both"`, either `"last.first"` (the default) or `"first.last"`.
+
+`name.sep`{#name.sep}
+
+:   When `which.names` is `"both"`, the string placed between the two names. Defaults to `", "`.
+
+`sample.with.replacement`{#sample.with.replacement}
+
+:   Sample names with replacement? Defaults to `TRUE`. Without replacement the number of names asked for in one gender and ethnicity group cannot exceed the names available for it.
+
+`return.complete.data`{#return.complete.data}
+
+:   Return a `data.table` with the `ethnicity` and `gender` codes used alongside the names, instead of a character vector. Defaults to `FALSE`.
+
+## Value
+
+A character vector of names, or, when `return.complete.data = TRUE`, a `data.table` with columns `gender`, `ethnicity` and the requested names.
+
+## Description
+
+Generates random first and/or last names that are consistent with a given gender and ethnicity. Names are sampled in proportion to how often they occur in the embedded [randomNamesData](randomNamesData.html) data set, so the result looks like a realistic roster. Random names are useful to anonymise results that would otherwise identify people.
+
+## Details
+
+The number of names returned is the largest of `n`, `length(gender)` and `length(ethnicity)`; shorter vectors are recycled. Gender is used only for first names; ethnicity is used for both first and last names. A missing gender or ethnicity (`NA`, or not supplied) is drawn at random: gender with equal probability, ethnicity with equal probability across the six codes.
+
+Gender and ethnicity may be given as codes or as text. Text is matched case-insensitively: `"Male"`/`"M"`, `"Female"`/`"F"`; and for ethnicity `"American Indian"`, `"Alaska"` or `"Native American"` (1); `"Asian"`, `"Hawaii"` or `"Pacific"` (2); `"Black"` or `"African"` (3); `"Hispanic"` or `"Latino"` (4); `"White"` or `"Caucasian"` (5); `"Middle Eastern"` or `"Arabic"` (6). A value that matches nothing is drawn at random, with a warning.
+
+## Examples
+
+``` R
+randomNames()  # one name in "last, first" form
+
+randomNames(5, which.names = "first")
+
+randomNames(5, return.complete.data = TRUE)
+
+test.df <- data.frame(
+  GENDER = sample(0:1, 100, replace = TRUE),
+  ETHNICITY = sample(1:6, 100, replace = TRUE)
+)
+head(randomNames(gender = test.df$GENDER, ethnicity = test.df$ETHNICITY))
+
+ethnicities <- c("African American", "Hispanic", "Asian", "White", "Native American")
+genders <- c("Female", "Male")
+test.df <- data.frame(
+  GENDER = sample(genders, 100, replace = TRUE),
+  ETHNICITY = sample(ethnicities, 100, replace = TRUE)
+)
+head(randomNames(gender = test.df$GENDER, ethnicity = test.df$ETHNICITY))
+```
+
+## See Also
+
+[randomNamesData](randomNamesData.html)
+

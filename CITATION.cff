@@ -1,10 +1,13 @@
-cff-version: 1.0.0
-message: "If you use the randomNames Package, please cite it using these metadata."
-authors:
-- family-names: "Damian"
-  given-names: "Betebenner"
-  orcid: "https://orcid.org/0000-0003-0476-5599"
+cff-version: 1.2.0
+message: "If you use the randomNames package, please cite it using these metadata."
+type: software
 title: "randomNames: Generate Random Given and Surnames"
-version: 1.6-1.0
-date-released: 2024-12-3
+version: 1.7-0.0
+date-released: 2026-10-31
+license: GPL-3.0-only
 url: "https://centerforassessment.github.io/randomNames/"
+repository-code: "https://github.com/CenterForAssessment/randomNames"
+authors:
+  - family-names: "Betebenner"
+    given-names: "Damian W."
+    orcid: "https://orcid.org/0000-0003-0476-5599"

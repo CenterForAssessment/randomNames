@@ -1,0 +1,66 @@
+name: Publish site
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "ui/www/**"
+      - "man/**"
+      - "vignettes/**"
+      - "NEWS.md"
+      - "DESCRIPTION"
+      - ".github/workflows/quarto-publish.yml"
+  pull_request:
+    paths:
+      - "ui/www/**"
+      - "man/**"
+      - "vignettes/**"
+      - "NEWS.md"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: quarto-dev/quarto-actions/setup@v2
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: any::yaml, any::knitr, any::rmarkdown, local::.
+          needs: website
+      - name: Check _quarto.yml
+        run: Rscript ui/www/tools/check-quarto-yml.R
+      - name: Render
+        run: quarto render ui/www
+      - name: Link check (internal)
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --offline --no-progress --root-dir ${{ github.workspace }}/ui/www/_site 'ui/www/_site/**/*.html'
+          fail: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ui/www/_site
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,94 @@
+---
+title: "News"
+toc: true
+toc-depth: 2
+---
+
+## randomNames 1.7-0.0
+
+### Bug fixes
+
+* Valid numeric gender and ethnicity codes are no longer lost when they are mixed with text or with an invalid value in the same vector. `ethnicity = c(1, 7, 3)` used to draw all three at random; now only `7` is.
+* The documentation matches the code: `return.complete.data` (not `which.names = "complete.data"`) returns the `data.table`, ethnicity code 6 is documented for `randomNamesData`, and the duplicated description is gone.
+
+### Changes
+
+* An invalid `n` (zero, negative, fractional, missing, non-numeric or longer than one) is now an error. It printed a note and returned `NULL`.
+* An unknown `which.names` or `name.order` is now an error. It silently returned `NULL`.
+* A gender or ethnicity value that matches nothing is still drawn at random, now with a warning.
+* Seeded output is unchanged: the same `set.seed()` gives the same names as 1.6-0.0. Tests pin this. An unspecified ethnicity is drawn uniformly from all six categories, as documented.
+* The startup banner appears only in interactive sessions, waits at most two seconds for each web request and can be switched off with `options(randomNames.startup_message = FALSE)` or `RANDOMNAMES_QUIET=true`. It no longer needs **pkgsearch**, and **cli** replaces **crayon**.
+* Documentation is generated with roxygen2, and the package now has a testthat 3rd edition test suite.
+* A new website built with Quarto at <https://centerforassessment.github.io/randomNames/>.
+* Requires R 4.1 or later.
+
+## randomNames 1.6-0.0
+
+* Added in Joshua Lambert's improvements.
+
+## randomNames 1.5-0.0
+
+* Fixed names with embedded spaces as the first character.
+
+## randomNames 1.4-0.0
+
+* Fixed issue with NAs embedded in ethnicity and gender returning wrong data later.
+
+## randomNames 1.0-0.0
+
+* Shortened and improved the title of the package.
+
+## randomNames 1.0-0.0
+
+* Changed numbering of releases from 3 to 4 digits.
+* Created real vignette and fixed everything up for a nice 1.0-0.0 release.
+
+## randomNames 0.6-0
+
+* Converted NEWS to NEWS.md and added that to repo.
+
+## randomNames 0.5-0
+
+* Adding vignette and building website.
+
+## randomNames 0.4-0
+
+* Added Middle-Eastern names (ethnicity=6) to data base.
+
+## randomNames 0.3-0
+
+* Fixed bug leading to incorrect re-ordering of results so that they didn't match input.
+
+## randomNames 0.2-0
+
+* Cleaned up documentation.
+* Fixed GitHub pull requests.
+
+## randomNames 0.0-7
+
+* Changed randomNamesData to environment.
+
+## randomNames 0.0-6
+
+* Changed DESCRIPTION to Import data.table.
+
+## randomNames 0.0-5
+
+* Fixed key to accomodate changes in data.table 1.7.8.
+
+## randomNames 0.0-4
+
+* Added NAMESPACE.
+
+## randomNames 0.0-3
+
+* Modified function to adapt to improvements in data.table.
+
+## randomNames 0.0-2
+
+* Refined function to recode supplied gender and ethnicity argument/variables if not in function appropriate form.
+
+## randomNames 0.0-1
+
+* Package Released.
+

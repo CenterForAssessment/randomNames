@@ -1,19 +1,23 @@
 Package: randomNames
-Version: 1.6-1.0
-Date: 2024-12-3
+Version: 1.7-0.0
+Date: 2026-10-31
 Title: Generate Random Given and Surnames
-Depends: R (>= 4.0)
-Suggests: knitr, rmarkdown
-Imports: crayon, data.table (>= 1.14.0), pkgsearch, toOrdinal (>= 1.1)
-Authors@R: c(person(given=c("Damian", "W."), family="Betebenner", email="dbetebenner@nciea.org", role=c("aut", "cre"), comment=c(ORCID = "0000-0003-0476-5599")),
-                 person(given="Lambert", family="Joshua", role="ctb"))
-Maintainer: Damian W. Betebenner <dbetebenner@nciea.org>
-Description: Function for generating random gender and ethnicity correct first and/or last names. Names are chosen proportionally based upon their probability of appearing in a large scale data base of real names.
+Depends: R (>= 4.1)
+Imports: cli, data.table (>= 1.14.0), stats, toOrdinal (>= 1.4-0.0), utils
+Suggests: knitr, rmarkdown, testthat (>= 3.0.0), withr
+Authors@R: c(
+    person("Damian W.", "Betebenner", email = "dbetebenner@nciea.org", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-0476-5599")),
+    person("Lambert", "Joshua", role = "ctb"),
+    person("Center for Assessment", role = "cph"))
+Description: Generates gender and ethnicity correct first and/or last names. Names are chosen proportionally based upon their probability of appearing in a large scale data base of real names, so a roster of random names looks like a roster of real ones. Useful for anonymising results that would otherwise identify people.
 URL: https://centerforassessment.github.io/randomNames/, https://github.com/CenterForAssessment/randomNames/, https://cran.r-project.org/package=randomNames
 BugReports: https://github.com/CenterForAssessment/randomNames/issues/
 VignetteBuilder: knitr
-LazyLoad: Yes
-LazyData: Yes
+Encoding: UTF-8
+Config/testthat/edition: 3
+Roxygen: list(markdown = TRUE)
+LazyData: true
 LazyDataCompression: xz
-ByteCompile: TRUE
 License: GPL-3
+Config/roxygen2/version: 8.1.0

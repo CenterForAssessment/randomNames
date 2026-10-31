@@ -1,0 +1,23 @@
+---
+title: "Reference"
+toc: false
+---
+
+## Data sets
+
+::: {.reference-index}
+
+[`randomNamesData`](randomNamesData.html)
+:   First and last names by gender and ethnicity
+
+:::
+
+## Functions
+
+::: {.reference-index}
+
+[`randomNames()`](randomNames.html)
+:   Generate random first and last names
+
+:::
+

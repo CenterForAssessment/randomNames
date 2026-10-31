@@ -1,8 +1,11 @@
 ^docs$
 ^_pkgdown\.yml$
 ^README\.md$
-^LICENSE.md
-^\.appveyor\.yml$
-^vignettes/releases$
+^LICENSE\.md$
 ^\.github$
-^CITATION\.cff
+^vignettes/releases$
+^ui$
+^CITATION\.cff$
+^cran-comments\.md$
+^\.lycheeignore$
+^man/figures/favicon\.png$

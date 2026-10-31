@@ -1,0 +1,23 @@
+title: dataimago package-site theme
+author: dataimago
+version: 1.0.0
+quarto-required: ">=1.8.0"
+# dataimago-{light,dark}.scss and components.scss are copies of the dataimago-sync output of
+# @dataimago/css@0.1.0-alpha.18; pkgsite.scss is the package-site layer.
+generated-from: "@dataimago/css@0.1.0-alpha.18"
+contributes:
+  formats:
+    html:
+      theme:
+        light: [dataimago-light.scss, components.scss, pkgsite.scss]
+        dark: [dataimago-dark.scss, components.scss, pkgsite.scss]
+      respect-user-color-scheme: true
+      highlight-style: a11y
+      anchor-sections: true
+      smooth-scroll: false
+      link-external-icon: false
+      link-external-newwindow: false
+      toc: true
+      toc-depth: 3
+      code-copy: true
+      code-overflow: wrap

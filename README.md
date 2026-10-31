@@ -1,69 +1,67 @@
-randomNames
-===========
+# randomNames <a href="https://centerforassessment.github.io/randomNames/"><img src="man/figures/logo.svg" align="right" height="139" alt="randomNames hex logo" /></a>
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/CenterForAssessment/randomNames/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/CenterForAssessment/randomNames/actions/workflows/R-CMD-check.yaml)
+[![CRAN status](https://www.r-pkg.org/badges/version/randomNames)](https://CRAN.R-project.org/package=randomNames)
+[![License: GPL v3](https://img.shields.io/badge/license-GPL%203-blue.svg)](https://github.com/CenterForAssessment/randomNames/blob/master/LICENSE.md)
+<!-- badges: end -->
 
-[![R-CMD-check](https://github.com/CenterForAssessment/randomNames/workflows/R-CMD-check/badge.svg)](https://github.com/CenterForAssessment/randomNames/actions)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/centerforassessment/randomNames?branch=master&svg=true)](https://ci.appveyor.com/project/centerforassessment/randomNames)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/randomNames)](http://cran.r-project.org/package=randomNames)
-[![Development Version](https://img.shields.io/badge/devel-1.5--0.1-brightgreen.svg)](https://github.com/CenterForAssessment/randomNames)
-[![Rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/grand-total/randomNames)](https://github.com/metacran/cranlogs.app)
-[![License](http://img.shields.io/badge/license-GPL%203-brightgreen.svg?style=flat)](https://github.com/CenterForAssessment/randomNames/blob/master/LICENSE.md)
-[![https://gitter.im/CenterForAssessment/randomNames](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/CenterForAssessment/randomNames?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+## Overview
 
+**randomNames** has one function, `randomNames()`, that creates random first and/or last names that fit a gender and an ethnicity. Names are sampled in proportion to how often they occur in a large database of real names, so a roster of random names looks like a roster of real ones. That makes it useful for anonymising results that would otherwise identify people.
 
-# Overview
+## Installation
 
-The **randomNames** package contains a single function `randomNames` which creates random gender/ethnicity correct first and/or last names where names are proportionally sampled based upon their frequency in a large scale database.
+From [CRAN](https://CRAN.R-project.org/package=randomNames):
 
-
-# Installation
-
-## From [CRAN](https://CRAN.R-project.org/package=randomNames)
-
-To install the latest stable release of **randomNames** from [CRAN](https://CRAN.R-project.org/package=randomNames)
-
-```R
-> install.packages("randomNames")
+``` r
+install.packages("randomNames")
 ```
 
-## From [Github](https://github.com/CenterForAssessment/randomNames/)
+The development version from [GitHub](https://github.com/CenterForAssessment/randomNames/):
 
-To install the development release of **randomNames** from [GitHub](https://github.com/CenterForAssessment/randomNames/):
-
-```R
-> devtools::install_github("CenterForAssessment/randomNames")
+``` r
+# install.packages("pak")
+pak::pak("CenterForAssessment/randomNames")
 ```
 
-# Usage
+## Usage
 
+``` r
+library(randomNames)
+
+randomNames(5)                                    # last, first
+randomNames(5, gender = 1)                        # female
+randomNames(5, gender = 0, ethnicity = 3)         # male, Black
+randomNames(5, gender = 1, ethnicity = 6, which.names = "first")
+
+# Text works as well as codes
+randomNames(3, gender = c("Female", "Male"), ethnicity = c("Hispanic", "White", "Asian"))
+
+# The codes used, next to the names
+randomNames(3, return.complete.data = TRUE)
+
+# The same names again
+set.seed(42); randomNames(3)
+set.seed(42); randomNames(3)
 ```
-> randomNames(5) ## 5 last, first names
-[1] "Mossberg, Cassie"  "Mendiaz, Victoria" "Miner, Cassidy"    "Austin, Brook"     "Babcock, Lloyd"
 
-> randomNames(5, gender=1) ## 5 female last, first names
-[1] "Bruckner, Birva"   "Caringer, Madelyn" "Mendoza, Rebecca"  "el-Haque, Jaleela" "Williams, Miranda"
+Ethnicity codes are 1 American Indian or Native Alaskan, 2 Asian or Pacific Islander, 3 Black (not Hispanic), 4 Hispanic, 5 White (not Hispanic) and 6 Middle-Eastern or Arabic. Gender codes are 0 male and 1 female. When you give neither, each is drawn at random.
 
-> randomNames(5, gender=0) ## 5 male last, first names
-[1] "al-Salam, Rida"    "Debus, Kai"        "al-Aly, Jaabir"    "Garces, Markus"    "Robertson, Trevor"
+## The startup message
 
-> randomNames(5, gender=0, ethnicity=3) ## 5 African American, male last, first names
-[1] "Bashir, Shaquille" "Ursery, Keilan"    "Marlow, Marvin"    "Bell, Daishavon"   "Hammond, Kyle"
+In an interactive session the package prints a short banner that compares the installed version with CRAN and GitHub. It waits at most two seconds for each request. Switch it off with
 
-> randomNames(5, gender=1, ethnicity=6, which.names="first") ## 5 Middle Eastern, female first names
-[1] "Jawhara"  "Raaniya"  "Ghaada"   "Ghazaala" "Raabia"
+``` r
+options(randomNames.startup_message = FALSE)
 ```
 
+or set the environment variable `RANDOMNAMES_QUIET=true`. It never runs in scripts, `R CMD check` or on a server.
 
-# Resources
+## Resources
 
-* [randomNames GitHub Pages](https://CenterForAssessment.github.io/randomNames)
-* [CRAN Repo](https://CRAN.R-project.org/package=randomNames)
+- [Website](https://centerforassessment.github.io/randomNames/)
+- [CRAN](https://CRAN.R-project.org/package=randomNames)
+- [Issues](https://github.com/CenterForAssessment/randomNames/issues)
 
-
-# Contributors
-
-The **randomNames** Package is crafted with :heart: by:
-
-* [Damian Betebenner](https://github.com/dbetebenner)
-
-I love feedback and am happy to answer questions.
+Maintained by [Damian Betebenner](https://github.com/dbetebenner) at the [Center for Assessment](https://www.nciea.org/).
