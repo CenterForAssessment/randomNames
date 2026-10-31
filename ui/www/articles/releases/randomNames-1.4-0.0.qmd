@@ -1,6 +1,6 @@
 ---
 title: "randomNames 1.4-0.0"
-date: "March 10th, 2019"
+date: "2019-03-10"
 toc: true
 ---
 
