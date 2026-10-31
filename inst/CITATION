@@ -3,12 +3,12 @@ bibentry(
          header       = "To cite the randomNames package in publications use:",
          title        = "{randomNames}: Function for Generating Random Names and a Dataset",
          author       = "Damian W. Betebenner",
-         year         = "2024",
-         note         = "R package version 1.6-1.0",
+         year         = "2026",
+         note         = "R package version 1.7-0.0",
          url          = "https://cran.r-project.org/package=randomNames",
 
-         textVersion  = paste("Damian W. Betebenner (2024).",
+         textVersion  = paste("Damian W. Betebenner (2026).",
                         "randomNames: Function for Generating Random Names and a Dataset.",
-                        "(R package version 1.6-1.0",
+                        "(R package version 1.7-0.0",
                         "URL https://cran.r-project.org/package=randomNames")
 )

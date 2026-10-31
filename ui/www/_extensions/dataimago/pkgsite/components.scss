@@ -1,0 +1,230 @@
+// @dataimago/css@0.1.0-alpha.18 dist/quarto/components.scss · sha256:7449c84f769ce0f0ec574328144abb42b5c7087706f3ae2c6d36977977c94d50 · generated from tokens; do not edit · restore: npx -p @dataimago/css@0.1.0-alpha.18 dataimago-sync
+/*-- scss:rules --*/
+// dataimago components (.di-*) — generated from src/styles/components/.
+.di-figure-box {
+  border: 1px solid var(--color-border-moderate);
+  padding: 4px;
+  background-color: var(--color-surface-sunken);
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.di-figure-box:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-prominent, 0 4px 12px rgba(0, 0, 0, 0.15));
+  border-color: var(--color-interactive-primary);
+}
+.di-figure-box:active {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-moderate, 0 2px 8px rgba(0, 0, 0, 0.12));
+}
+.di-figure-box:focus-visible {
+  outline: 2px solid var(--color-interactive-focus);
+  outline-offset: 2px;
+}
+
+.di-figure-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: color-mix(in srgb, var(--color-content-primary) 92%, transparent);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.di-figure-modal.is-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: di-figure-modal-fade-in 0.25s ease;
+}
+.di-figure-modal .di-figure-modal-content {
+  position: relative;
+  max-width: 95vw;
+  max-height: 95vh;
+  animation: di-figure-modal-zoom-in 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.di-figure-modal .di-figure-modal-content img {
+  width: auto;
+  height: auto;
+  max-width: 95vw;
+  max-height: 95vh;
+  object-fit: contain;
+  border: 2px solid var(--color-interactive-primary);
+  background-color: var(--color-surface-elevated);
+  padding: 8px;
+  box-shadow: 0 20px 60px color-mix(in srgb, var(--color-content-primary) 40%, transparent);
+}
+.di-figure-modal .di-figure-modal-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  font-size: 2rem;
+  color: var(--color-content-inverse);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  line-height: 1;
+  transition: transform 0.2s ease, color 0.2s ease;
+  font-family: inherit;
+}
+.di-figure-modal .di-figure-modal-close:hover {
+  transform: scale(1.2);
+  color: var(--color-interactive-primary);
+}
+.di-figure-modal .di-figure-modal-close:focus-visible {
+  outline: 2px solid var(--color-interactive-primary);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm, 0.25rem);
+}
+.di-figure-modal .di-figure-modal-caption {
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: var(--color-content-inverse);
+  font-size: var(--font-size-small, 0.9rem);
+  font-style: italic;
+  padding: 0 2rem;
+  line-height: var(--line-height-normal, 1.4);
+}
+
+@keyframes di-figure-modal-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes di-figure-modal-zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .di-figure-box {
+    transition: none !important;
+  }
+  .di-figure-box:hover, .di-figure-box:active {
+    transform: none !important;
+  }
+  .di-figure-modal,
+  .di-figure-modal .di-figure-modal-content,
+  .di-figure-modal .di-figure-modal-close {
+    animation: none !important;
+    transition: none !important;
+  }
+  .di-figure-modal .di-figure-modal-close:hover {
+    transform: none !important;
+  }
+}
+
+@charset "UTF-8";
+.di-callout, .proof, .theorem, .definition, .proposition {
+  padding: var(--spacing-md, 1rem) var(--spacing-md, 1rem) var(--spacing-md, 1rem) var(--spacing-lg, 1.5rem);
+  margin: var(--spacing-lg, 1.5rem) 0;
+  border-radius: var(--radius-sm, 4px);
+  background-color: var(--color-surface-sunken);
+  border-left: 4px solid var(--color-interactive-primary);
+}
+.di-callout .di-callout-title, .di-callout .proof-title, .proof .di-callout-title, .proof .proof-title, .di-callout .theorem-title, .proof .theorem-title, .di-callout .definition-title, .proof .definition-title, .di-callout .proposition-title, .proof .proposition-title, .theorem .di-callout-title, .theorem .proof-title, .theorem .theorem-title, .theorem .definition-title, .theorem .proposition-title, .definition .di-callout-title, .definition .proof-title, .definition .theorem-title, .definition .definition-title, .definition .proposition-title, .proposition .di-callout-title, .proposition .proof-title, .proposition .theorem-title, .proposition .definition-title, .proposition .proposition-title {
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 0.5rem;
+  color: var(--color-content-primary);
+}
+.di-callout > :last-child, .proof > :last-child, .theorem > :last-child, .definition > :last-child, .proposition > :last-child {
+  margin-bottom: 0;
+}
+
+.di-callout-insight {
+  border-left-color: var(--color-interactive-accent);
+}
+.di-callout-insight .di-callout-title, .di-callout-insight .proof-title, .di-callout-insight .theorem-title, .di-callout-insight .definition-title, .di-callout-insight .proposition-title {
+  color: var(--color-interactive-accent);
+}
+
+.di-callout-tip {
+  border-left-color: var(--color-presentation-accent);
+}
+.di-callout-tip .di-callout-title, .di-callout-tip .proof-title, .di-callout-tip .theorem-title, .di-callout-tip .definition-title, .di-callout-tip .proposition-title {
+  color: var(--color-presentation-accent);
+}
+
+.di-callout-proof, .proof {
+  margin: var(--spacing-md, 1rem) 0;
+}
+.di-callout-proof .di-callout-title, .di-callout-proof .proof-title, .proof .di-callout-title, .proof .proof-title, .di-callout-proof .theorem-title, .proof .theorem-title, .di-callout-proof .definition-title, .proof .definition-title, .di-callout-proof .proposition-title, .proof .proposition-title {
+  font-style: italic;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-content-primary);
+}
+.di-callout-proof::after, .proof::after {
+  content: "□";
+  float: right;
+  color: var(--color-content-secondary);
+}
+
+.di-callout-rich {
+  padding: 0;
+  margin: 0.6em 0 0.8em 0;
+  border-radius: 6px;
+  border-left-width: 4px;
+  border-style: solid;
+  overflow: hidden;
+}
+.di-callout-rich .di-callout-title, .di-callout-rich .proof-title, .di-callout-rich .theorem-title, .di-callout-rich .definition-title, .di-callout-rich .proposition-title {
+  margin: 0;
+  padding: 0.35em 0.75em;
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-semibold);
+  border-bottom: 1px solid currentColor;
+}
+.di-callout-rich > :not(.di-callout-title):not(.proof-title):not(.theorem-title):not(.definition-title):not(.proposition-title) {
+  padding-left: 0.9em;
+  padding-right: 0.9em;
+}
+.di-callout-rich > :last-child {
+  padding-bottom: 0.55em;
+}
+
+.di-callout-rich.di-callout-theorem, .di-callout-rich.theorem, .di-callout-rich.definition, .di-callout-rich.proposition {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-interactive-primary) 10%, transparent), color-mix(in srgb, var(--color-interactive-primary) 3%, transparent));
+  border-color: color-mix(in srgb, var(--color-interactive-primary) 30%, transparent);
+  border-left-color: var(--color-interactive-primary);
+}
+.di-callout-rich.di-callout-theorem .di-callout-title, .di-callout-rich.di-callout-theorem .proof-title, .di-callout-rich.di-callout-theorem .theorem-title, .di-callout-rich.di-callout-theorem .definition-title, .di-callout-rich.di-callout-theorem .proposition-title, .di-callout-rich.theorem .di-callout-title, .di-callout-rich.theorem .proof-title, .di-callout-rich.theorem .theorem-title, .di-callout-rich.theorem .definition-title, .di-callout-rich.theorem .proposition-title, .di-callout-rich.definition .di-callout-title, .di-callout-rich.definition .proof-title, .di-callout-rich.definition .theorem-title, .di-callout-rich.definition .definition-title, .di-callout-rich.definition .proposition-title, .di-callout-rich.proposition .di-callout-title, .di-callout-rich.proposition .proof-title, .di-callout-rich.proposition .theorem-title, .di-callout-rich.proposition .definition-title, .di-callout-rich.proposition .proposition-title {
+  background: color-mix(in srgb, var(--color-interactive-primary) 18%, transparent);
+  color: color-mix(in srgb, var(--color-interactive-primary) 80%, var(--color-content-primary));
+  border-bottom-color: color-mix(in srgb, var(--color-interactive-primary) 28%, transparent);
+}
+
+.di-callout-rich.di-callout-insight {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-interactive-accent) 10%, transparent), color-mix(in srgb, var(--color-interactive-accent) 3%, transparent));
+  border-color: color-mix(in srgb, var(--color-interactive-accent) 30%, transparent);
+  border-left-color: var(--color-interactive-accent);
+}
+.di-callout-rich.di-callout-insight .di-callout-title, .di-callout-rich.di-callout-insight .proof-title, .di-callout-rich.di-callout-insight .theorem-title, .di-callout-rich.di-callout-insight .definition-title, .di-callout-rich.di-callout-insight .proposition-title {
+  background: color-mix(in srgb, var(--color-interactive-accent) 18%, transparent);
+  color: color-mix(in srgb, var(--color-interactive-accent) 80%, var(--color-content-primary));
+  border-bottom-color: color-mix(in srgb, var(--color-interactive-accent) 28%, transparent);
+}
+
+.di-callout-rich.di-callout-tip {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-presentation-accent) 8%, transparent), color-mix(in srgb, var(--color-presentation-accent) 3%, transparent));
+  border-color: color-mix(in srgb, var(--color-presentation-accent) 20%, transparent);
+  border-left-color: var(--color-presentation-accent);
+}
+.di-callout-rich.di-callout-tip .di-callout-title, .di-callout-rich.di-callout-tip .proof-title, .di-callout-rich.di-callout-tip .theorem-title, .di-callout-rich.di-callout-tip .definition-title, .di-callout-rich.di-callout-tip .proposition-title {
+  background: color-mix(in srgb, var(--color-presentation-accent) 15%, transparent);
+  color: var(--color-presentation-accent-hover);
+  border-bottom-color: color-mix(in srgb, var(--color-presentation-accent) 25%, transparent);
+}

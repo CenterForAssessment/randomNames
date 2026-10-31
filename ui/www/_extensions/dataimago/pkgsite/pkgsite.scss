@@ -1,0 +1,136 @@
+/*-- scss:rules --*/
+// Package-site layer on the dataimago tokens. Colours come only from the token custom
+// properties, so the light/dark pair switches at runtime. Josefin Sans carries headings and
+// labels; Noto Sans, Noto Sans Mono and Noto Sans Math carry everything else.
+
+:root {
+  --font-family-mono: "Noto Sans Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+code, kbd, pre, samp, .sourceCode { font-family: var(--font-family-mono); }
+.math.inline, .math.display { font-family: var(--font-family-math); }
+
+// ── Navbar: Quarto's headroom hides it on scroll down and returns it on scroll up ──
+.navbar {
+  border-bottom: 1px solid var(--color-border-subtle);
+  .navbar-title, .navbar-nav .nav-link {
+    font-family: var(--font-family-display);
+    letter-spacing: 0.02em;
+  }
+  .navbar-title { font-weight: var(--font-weight-normal); }
+  .navbar-brand-logo img { height: 2.4rem; width: auto; }
+  .pkg-version {
+    font-family: var(--font-family-sans);
+    font-size: 0.72rem;
+    color: var(--color-content-secondary);
+    margin-left: 0.4rem;
+  }
+}
+
+h1, h2, h3, h4, .title {
+  font-family: var(--font-family-display);
+  font-feature-settings: var(--font-feature-settings-display);
+}
+h1.title, .quarto-title h1 { font-weight: var(--font-weight-light); letter-spacing: -0.01em; }
+
+// ── Kicker labels ──
+.kicker {
+  font-family: var(--font-family-display);
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-content-secondary);
+  border-top: 2px solid var(--color-interactive-primary);
+  padding-top: var(--spacing-sm);
+  margin: var(--spacing-3xl) 0 var(--spacing-lg);
+}
+
+// ── Package hero: hex, name, one-line purpose, badges, actions ──
+.pkg-hero {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+  margin: var(--spacing-2xl) 0 var(--spacing-xl);
+
+  img.pkg-hex { width: 10rem; height: auto; }
+  .pkg-name {
+    font-family: var(--font-family-display);
+    font-weight: var(--font-weight-light);
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    line-height: var(--font-lineHeight-tight);
+    margin: 0;
+  }
+  .pkg-tagline {
+    color: var(--color-content-secondary);
+    font-size: 1.1rem;
+    margin: var(--spacing-xs) 0 var(--spacing-md);
+    max-width: 42rem;
+  }
+}
+@media (max-width: 575.98px) { .pkg-hero { grid-template-columns: 1fr; } .pkg-hero img.pkg-hex { width: 7rem; } }
+
+.pkg-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin: var(--spacing-sm) 0;
+  padding: 0;
+  list-style: none;
+  img { height: 20px; width: auto; }
+}
+
+// ── Pill links ──
+.pill-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  padding: 0;
+  margin: var(--spacing-md) 0;
+  list-style: none;
+}
+main.content .pill-links a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid var(--color-border-moderate);
+  border-radius: var(--radius-full);
+  color: var(--color-content-primary);
+  text-decoration: none !important;
+  font-size: 0.92rem;
+  transition: background-color var(--transition-quick), border-color var(--transition-quick);
+  &:hover { background-color: var(--navigation-hover-background); border-color: var(--color-interactive-primary); }
+  &:focus-visible { outline: 2px solid var(--color-interactive-focus); outline-offset: 2px; }
+}
+
+// ── Reference index ──
+.reference-index {
+  dl { display: grid; grid-template-columns: minmax(10rem, 18rem) 1fr; gap: var(--spacing-sm) var(--spacing-lg); }
+  dt { font-family: var(--font-family-mono); font-size: 0.92rem; }
+  dd { margin: 0; color: var(--color-content-secondary); }
+}
+@media (max-width: 575.98px) { .reference-index dl { grid-template-columns: 1fr; } }
+
+// ── Reference pages and articles ──
+main.content {
+  pre { border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); padding: var(--spacing-md); }
+  table { width: 100%; }
+  h2 { font-size: 1.5rem; margin-top: var(--spacing-2xl); }
+}
+
+// ── Footer: the Center is credited here ──
+.nav-footer {
+  border-top: 1px solid var(--color-border-subtle);
+  font-size: 0.9rem;
+  color: var(--color-content-secondary);
+  a { color: inherit; text-decoration: underline; text-underline-offset: 0.15em; }
+}
+
+main.content dl:not(.quarto-listing-category) {
+  dt { font-family: var(--font-family-mono); font-size: 0.92rem; margin-top: var(--spacing-md); }
+  dd { margin-left: var(--spacing-lg); }
+}
+
+main.content .reference-index dl dt { margin-top: 0; }
+main.content .reference-index dl dd { margin-left: 0; }

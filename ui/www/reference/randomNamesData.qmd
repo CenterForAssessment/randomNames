@@ -1,0 +1,41 @@
+---
+title: "randomNamesData"
+subtitle: "First and last names by gender and ethnicity"
+toc: true
+---
+
+## Format
+
+An environment holding 18 one-column arrays whose row names are the names and whose values are their frequency probabilities:
+
+-   `⁠first_names_e<E>_g<G>⁠`{style="white-space: pre;"}: first names for ethnicity `E` (1 to 6) and gender `G` (0 male, 1 female), twelve arrays;
+
+-   `⁠last_names_e<E>⁠`{style="white-space: pre;"}: last names for ethnicity `E` (1 to 6), six arrays.
+
+Ethnicity is coded 1 American Indian or Native Alaskan, 2 Asian or Pacific Islander, 3 Black (not Hispanic), 4 Hispanic, 5 White (not Hispanic) and 6 Middle-Eastern or Arabic. For example `first_names_e1_g0` holds first names and frequency probabilities for male American Indians or Native Alaskans. `ls(randomNamesData)` lists all arrays.
+
+## Source
+
+Large scale state data.
+
+## Usage
+
+``` R
+randomNamesData
+```
+
+## Description
+
+Names with their frequencies, compiled from a large-scale data set of names in which each person's gender and ethnicity were recorded. The frequencies are the sampling probabilities [`randomNames()`](randomNames.html) uses, so sampling gives a realistic roster. First names are held by gender and ethnicity, last names by ethnicity.
+
+## Examples
+
+``` R
+head(ls(randomNamesData))
+head(randomNamesData$last_names_e4)
+```
+
+## See Also
+
+[`randomNames()`](randomNames.html)
+

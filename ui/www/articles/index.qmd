@@ -1,0 +1,15 @@
+---
+title: "Articles"
+listing:
+  contents:
+    - "*.qmd"
+    - "releases/*.qmd"
+  exclude:
+    filename: index.qmd
+  type: table
+  sort: "title desc"
+  fields: [title, subtitle]
+page-layout: article
+toc: false
+---
+

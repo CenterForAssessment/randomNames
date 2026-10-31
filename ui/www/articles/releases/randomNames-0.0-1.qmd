@@ -1,0 +1,28 @@
+---
+title: "randomNames 0.0-1"
+date: "2011-06-05"
+toc: true
+---
+
+
+```{r, echo = FALSE}
+is_html_output = function() {
+  knitr::opts_knit$get("rmarkdown.pandoc.to")=="html"
+}
+knitr::opts_chunk$set(collapse = TRUE, comment = "", prompt=TRUE, fig.dpi = 96)
+if (is_html_output()) {
+    options(width=1000)
+}
+```
+
+
+This is the initial release of the **randomNames** package. The **randomNames** package was developed to avoid always naming anonymous persons *John Doe* or *Jane Doe*.
+Random names generated from the `randomNames` function are derived from a large data base of personal names with gender and ethnicity identifiers. The names are
+also probabilistically selected based upon their frequency in the original data from which they were derived.
+
+```{r}
+library(randomNames)
+randomNames(5)
+```
+
+For complete `randomNames` documentation, see the [documentation](https://CenterForAssessment.github.io/randomNames/reference/randomNames.html)

@@ -1,0 +1,321 @@
+// @dataimago/css@0.1.0-alpha.18 dist/quarto/dataimago-dark.scss · sha256:5d85054f4316c2ad6c65d29f1b26f939e0052b6ba716ea50545a21eef69d24d7 · generated from tokens; do not edit · restore: npx -p @dataimago/css@0.1.0-alpha.18 dataimago-sync
+// dataimago dark theme for Quarto 1.8 — generated from the design tokens (tools/formats/quarto.mjs).
+// Bootstrap Sass variables are compile-time sRGB; runtime colours come from the custom properties below.
+
+/*-- scss:defaults --*/
+$body-bg: #141410 !default;
+$body-color: #fdf9f2 !default;
+$headings-color: #fdf9f2 !default;
+$navbar-bg: #141410 !default;
+$link-color: #98a384 !default;
+$link-hover-color: #7e8a6b !default;
+$code-color: #3498db !default;
+$code-bg: #1c1917 !default;
+$border-color: #7d7b76 !default;
+$font-family-sans-serif: Noto Sans, Fira Sans, system-ui, sans-serif !default;
+$font-family-monospace: JetBrains Mono, SF Mono, Monaco, Inconsolata, monospace !default;
+$headings-font-family: Josefin Sans, system-ui, sans-serif !default;
+$headings-font-weight: 500 !default;
+$h2-font-size: 1.875rem !default;
+
+/*-- scss:rules --*/
+// ── Design tokens (contract custom properties) ───────────────────────
+:root {
+  --color-palette-ink-50: #f5f5f4;
+  --color-palette-ink-100: #e7e5e4;
+  --color-palette-ink-200: #d6d3d1;
+  --color-palette-ink-300: #a8a29e;
+  --color-palette-ink-400: #78716c;
+  --color-palette-ink-500: #57534e;
+  --color-palette-ink-600: #44403c;
+  --color-palette-ink-700: #292524;
+  --color-palette-ink-800: #1c1917;
+  --color-palette-ink-900: #0c0a09;
+  --color-palette-stone-50: #f7f7f6;
+  --color-palette-stone-100: #ededeb;
+  --color-palette-stone-200: #dcdcda;
+  --color-palette-stone-300: #c1c1bf;
+  --color-palette-stone-400: #a0a0a0;
+  --color-palette-stone-500: #7c7c7c;
+  --color-palette-stone-600: #5e5e5c;
+  --color-palette-stone-700: #424240;
+  --color-palette-stone-800: #292927;
+  --color-palette-stone-900: #14140f;
+  --color-palette-forest-50: #f0f1ed;
+  --color-palette-forest-100: #dde0d4;
+  --color-palette-forest-200: #bdc4ad;
+  --color-palette-forest-300: #98a384;
+  --color-palette-forest-400: #7e8a6b;
+  --color-palette-forest-500: #5e6749;
+  --color-palette-forest-600: #4d5640;
+  --color-palette-forest-700: #434739;
+  --color-palette-forest-800: #363a2e;
+  --color-palette-forest-900: #1f2218;
+  --color-palette-paper-50: #fefdfb;
+  --color-palette-paper-100: #fdf9f2;
+  --color-palette-paper-200: #faf2e3;
+  --color-palette-paper-300: #f5e8cf;
+  --color-palette-paper-400: #edd9b3;
+  --color-palette-paper-500: #e0c088;
+  --color-palette-copper-50: #fdf4ee;
+  --color-palette-copper-100: #fbe5d1;
+  --color-palette-copper-200: #f6c79c;
+  --color-palette-copper-300: #f0a467;
+  --color-palette-copper-400: #ea8441;
+  --color-palette-copper-500: #d46820;
+  --color-palette-copper-600: #b55017;
+  --color-palette-copper-700: #913d15;
+  --color-palette-copper-800: #753318;
+  --color-palette-copper-900: #612b16;
+  --color-palette-accent-50: #f0f8fc;
+  --color-palette-accent-300: #3498DB;
+  --color-palette-accent-400: #2980B9;
+  --color-palette-accent-500: #1f618d;
+  --color-palette-accent-600: #154d6f;
+  --color-palette-accent-700: #0f3a52;
+  --color-palette-presentation-blue-50: #f0f8fc;
+  --color-palette-presentation-blue-500: #3498DB;
+  --color-palette-presentation-blue-600: #2980B9;
+  --color-palette-presentation-blue-700: #1f618d;
+  --color-functional-success: #27AE60;
+  --color-functional-warning: #F39C12;
+  --color-functional-error: #E74C3C;
+  --color-functional-info: #3498DB;
+  --transition-quick: 0.15s ease;
+  --transition-standard: 0.25s ease-in-out;
+  --transition-smooth: 0.35s ease;
+  --transition-logo: 0.3s;
+  --font-family-sans: Noto Sans, Fira Sans, system-ui, sans-serif;
+  --font-family-mono: JetBrains Mono, SF Mono, Monaco, Inconsolata, monospace;
+  --font-family-display: var(--font-family-display-editorial);
+  --font-family-display-editorial: Josefin Sans, system-ui, sans-serif;
+  --font-family-display-documentation: Noto Sans, system-ui, sans-serif;
+  --font-family-brand: Futura, system-ui, sans-serif;
+  --font-family-math: Noto Sans Math, Noto Sans, system-ui, sans-serif;
+  --font-size-micro: 0.75rem;
+  --font-size-small: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-readable: 1.125rem;
+  --font-size-emphasis: 1.25rem;
+  --font-size-heading-small: 1.5rem;
+  --font-size-heading-medium: 1.875rem;
+  --font-size-heading-large: 2.25rem;
+  --font-size-heading-xl: 3rem;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-heading-h1: var(--font-weight-medium);
+  --font-weight-heading-h2: var(--font-weight-medium);
+  --font-weight-heading-h3: var(--font-weight-normal);
+  --font-weight-heading-h4: var(--font-weight-light);
+  --font-weight-heading-h5: var(--font-weight-light);
+  --font-weight-heading-h6: var(--font-weight-light);
+  --font-weight-heading-subtitle: var(--font-weight-semibold);
+  --font-style-normal: normal;
+  --font-style-italic: italic;
+  --font-style-oblique: oblique;
+  --font-lineHeight-tight: 1.25;
+  --font-lineHeight-normal: 1.5;
+  --font-lineHeight-relaxed: 1.625;
+  --font-feature-settings-display: "lnum";
+  --font-feature-settings-body: "normal";
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+  --color-dataviz-okabe-ito-orange: #E69F00;
+  --color-dataviz-okabe-ito-sky-blue: #56B4E9;
+  --color-dataviz-okabe-ito-bluish-green: #009E73;
+  --color-dataviz-okabe-ito-yellow: #F0E442;
+  --color-dataviz-okabe-ito-blue: #0072B2;
+  --color-dataviz-okabe-ito-vermillion: #D55E00;
+  --color-dataviz-okabe-ito-reddish-purple: #CC79A7;
+  --color-dataviz-categorical-1: #E69F00;
+  --color-dataviz-categorical-2: #56B4E9;
+  --color-dataviz-categorical-3: #009E73;
+  --color-dataviz-categorical-4: #F0E442;
+  --color-dataviz-categorical-5: #0072B2;
+  --color-dataviz-categorical-6: #D55E00;
+  --color-dataviz-categorical-7: #CC79A7;
+}
+
+:root, body.quarto-dark, [data-bs-theme="dark"] {
+  --color-surface-page: #141410;
+  --color-surface-page: color(display-p3 0.0784 0.0784 0.0643);
+  --color-surface-page-scrolled: #141410;
+  --color-surface-page-scrolled: color(display-p3 0.0784 0.0784 0.0643);
+  --color-surface-elevated: #1c1917;
+  --color-surface-elevated: color(display-p3 0.1078 0.0985 0.0911);
+  --color-surface-sunken: #0c0a09;
+  --color-surface-sunken: color(display-p3 0.0457 0.0395 0.0358);
+  --color-surface-navbar: #141410;
+  --color-surface-navbar: color(display-p3 0.0784 0.0784 0.0643);
+  --color-surface-navbar-scrolled: #141410;
+  --color-surface-navbar-scrolled: color(display-p3 0.0784 0.0784 0.0643);
+  --color-surface-code: #1c1917;
+  --color-surface-code: color(display-p3 0.1078 0.0985 0.0911);
+  --color-border-subtle: rgba(253, 249, 242, 0.45);
+  --color-border-subtle: color(display-p3 0.9894 0.977 0.9518 / 0.45);
+  --color-border-moderate: rgba(253, 249, 242, 0.60);
+  --color-border-moderate: color(display-p3 0.9894 0.977 0.9518 / 0.60);
+  --color-border-strong: rgba(253, 249, 242, 0.75);
+  --color-border-strong: color(display-p3 0.9894 0.977 0.9518 / 0.75);
+  --color-border-card: rgba(253, 249, 242, 0.60);
+  --color-border-card: color(display-p3 0.9894 0.977 0.9518 / 0.60);
+  --color-border-code: #292524;
+  --color-border-code: color(display-p3 0.1581 0.1456 0.1418);
+  --color-content-primary: #fdf9f2;
+  --color-content-primary: color(display-p3 0.9894 0.977 0.9518);
+  --color-content-secondary: #a8a29e;
+  --color-content-secondary: color(display-p3 0.6547 0.6361 0.6215);
+  --color-content-muted: #89827d;
+  --color-content-muted: color(display-p3 0.5325 0.5107 0.4925);
+  --color-content-inverse: #0c0a09;
+  --color-content-inverse: color(display-p3 0.0457 0.0395 0.0358);
+  --color-interactive-primary: #98a384;
+  --color-interactive-primary: color(display-p3 0.604 0.6378 0.5291);
+  --color-interactive-hover: #7e8a6b;
+  --color-interactive-hover: color(display-p3 0.5029 0.5397 0.4313);
+  --color-interactive-accent: #3498db;
+  --color-interactive-accent: color(display-p3 0.3208 0.588 0.8369);
+  --color-interactive-focus: #98a384;
+  --color-interactive-focus: color(display-p3 0.604 0.6378 0.5291);
+  --color-presentation-accent: #3498db;
+  --color-presentation-accent: color(display-p3 0.3208 0.588 0.8369);
+  --color-presentation-accent-hover: #2980b9;
+  --color-presentation-accent-hover: color(display-p3 0.2638 0.495 0.7068);
+  --color-vertical-accent-dissertation: #ce8e5c;
+  --color-vertical-accent-dissertation: color(display-p3 0.8089 0.5486 0.3177);
+  --color-vertical-accent-rpkg: #60a5fa;
+  --color-vertical-accent-rpkg: color(display-p3 0.4405 0.6403 0.9545);
+  --color-vertical-accent-SGPc: #b2bf22;
+  --color-vertical-accent-SGPc: color(display-p3 0.7074 0.7474 0.2714);
+  --color-brand-mark-red: #ff0000;
+  --color-brand-mark-red: color(display-p3 1 0 0);
+  --contrast-high: rgb(237, 237, 235);
+  --contrast-readable: rgb(237, 237, 235);
+  --contrast-medium: #83838f;
+  --contrast-subtle: #83838f;
+  --shadow-subtle: 0 1px 2px 0 rgb(237 237 235 / 0.03);
+  --shadow-moderate: 0 4px 6px -1px rgb(237 237 235 / 0.05);
+  --shadow-prominent: 0 10px 15px -3px rgb(237 237 235 / 0.4);
+  --border-subtle: rgba(237, 237, 235, 0.47);
+  --border-moderate: rgba(237, 237, 235, 0.63);
+  --border-focus: #4FC3F7;
+  --navigation-hover-background: rgba(237, 237, 235, 0.05);
+  --navigation-active-background: rgba(237, 237, 235, 0.1);
+  --color-dataviz-okabe-ito-black: #FDF9F2;
+  --color-dataviz-categorical-8: #FDF9F2;
+  --color-dataviz-uncertainty-outer: #333333;
+  --color-dataviz-uncertainty-union: #6B6B6B;
+  --color-dataviz-uncertainty-inner: #D6D6D6;
+}
+
+// ── Quarto chrome → tokens ──────────────────────────────────────────────
+body {
+  background-color: var(--color-surface-page);
+  color: var(--color-content-primary);
+}
+
+h1, h2, h3, h4, h5, h6, .title {
+  color: var(--color-content-primary);
+}
+
+// Links in running text are underlined: interactive.primary is about 1.9:1
+// against body text in light mode, so colour cannot be the only cue (WCAG 1.4.1).
+main.content :is(p, li, dd, td, blockquote, figcaption, .callout-body) a {
+  color: var(--color-interactive-primary);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+main.content :is(p, li, dd, td, blockquote, figcaption, .callout-body) a:hover {
+  color: var(--color-interactive-hover);
+}
+
+// Navigation and the outline stay plain.
+#TOC a, nav a, .sidebar a, .navbar a, a.footnote-ref, a.anchorjs-link {
+  text-decoration: none;
+}
+
+:not(pre) > code {
+  color: var(--color-interactive-accent);
+  background-color: var(--color-surface-code);
+}
+
+pre, div.sourceCode {
+  background-color: var(--color-surface-code);
+  border: 1px solid var(--color-border-code);
+}
+
+// Quarto themes its popups as [data-theme~="quarto"] at compile time ($body-bg);
+// match that specificity so the runtime token wins.
+.tippy-box, .tippy-box[data-theme~="quarto"] {
+  background-color: var(--color-surface-elevated);
+  color: var(--color-content-primary);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.tippy-box[data-theme~="quarto"] > .tippy-backdrop {
+  background-color: var(--color-surface-elevated);
+}
+
+.callout {
+  background-color: var(--color-surface-elevated);
+  border-color: var(--color-border-subtle);
+}
+
+.column-margin, .margin-aside, figcaption {
+  color: var(--color-content-secondary);
+}
+
+// Elevated cards carry an edge: in dark mode surface.elevated is about 1.06:1
+// against surface.page, so a card without one disappears.
+.di-elevated, div.abstract {
+  background-color: var(--color-surface-elevated);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+}
+
+// ===== THEME TOGGLE STYLING =====
+// Dark theme - show sun icon (switch to light)
+
+.quarto-color-scheme-toggle .bi::before {
+  display: inline-block !important;
+  height: 1rem !important;
+  width: 1rem !important;
+  content: "" !important;
+  vertical-align: -0.125em !important;
+  background-repeat: no-repeat !important;
+  background-size: 1rem 1rem !important;
+  background-color: transparent !important;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%2383838F" class="bi bi-sun" viewBox="0 0 16 16"><path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/></svg>') !important;
+  transition: background-image 0.25s ease;
+}
+
+.quarto-color-scheme-toggle:hover .bi::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23EDEDE8" class="bi bi-sun" viewBox="0 0 16 16"><path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/></svg>') !important;
+  transition: background-image 0.25s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quarto-color-scheme-toggle .bi::before {
+    transition: none !important;
+  }
+}
